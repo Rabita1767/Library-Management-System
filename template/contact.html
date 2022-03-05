@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Library</title>
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Flamenco&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="row clearfix">
+                <div class="left">
+                    <h4 class="change1">Online Library</h4>
+                </div>
+                <div class="right">
+                    <ul class="main-nav animate__animated animate_slideInDown">
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">ABOUT US</a></li>
+                        <li><a href="#">SERVICES</a></li>
+                        <li><a href="#">BOOKS</a></li>
+                        <li><a href="#">FEEDBACK</a></li>
+                        <li><a href="contact.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="main">
+            <div class="contact-form">
+                <form method="POST" action="../php/contact.php" id="contact-form">
+                    <h2>Contact us</h2>
+
+                    <p>
+                        <label>First Name:</label>
+                        <input name="visitor_name" type="text" size="30" id="nme" pattern=[A-Z\sa-z]{3,20} required>
+                    </p>
+                    <p>
+                        <label>Email Address:</label>
+                        <input name="visitor_email" type="email" id="email" size="30">
+                    </p>
+                    <p>
+                        <label>Subject:</label>
+                        <input name="Subject" type="text" id="subject" size="30">
+                    </p>
+                    <p>
+                        <label>Message:</label>
+                        <textarea id="message" name="visitor_message" rows="6" cols="80" required></textarea>
+                    </p>
+                    <button name="btn-send" type="submit" class="btn btn-success">Send</button>
+
+                </form>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>
