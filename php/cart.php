@@ -1,6 +1,7 @@
 <?php
 session_start();
 include('connection.php');
+
 if(isset($_POST["add"]))
 {
    if(isset( $_SESSION["shopping_cart"]))
@@ -64,19 +65,21 @@ if(isset($_GET['action']))
 
 }
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>List of Books</title>
-  <link rel="stylesheet" type="text/css" href="../css/book.css">
+  <title>Cart Item</title>
+  <link rel="stylesheet" type="text/css" href="../css/cart.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,300&family=Lato&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
 </head>
+<body>
 <div class="start">
         <section id="nav-bar">
             <div class="header">
@@ -110,127 +113,57 @@ if(isset($_GET['action']))
     </section>
 <body>
     <div class="container text-center ">
-    <h1 class="title mt-5 ">LIST OF BOOKS</h1>
+    <h1 class="title mt-5 ">Booking Detail</h1>
     
 
 
     <br>
-    <div class="row">
-    <?php
-    $selectquery="select * from book1";
-    $query=mysqli_query($con,$selectquery);
-    $nums=mysqli_num_rows($query);
-    while($res=mysqli_fetch_array($query))
-    {
-      ?>
-      <div class="col-lg-3 col-md-3 col-sm-12">
-      <form action="book.php?action=add&id=<?php echo $res["id"];?>" method="post">
-      <div class="card">
-          <h4 class="card-title pb-2 pt-2 text-white  r1"><?php echo $res['category'];?></h4>
-
-          <div class="card-body">
-          <img src="<?php echo $res['image'];?>" alt="" class="img-fluid mb-2">
-
-          <h5><?php echo $res['name'];?></h5>
-
-          <h6><?php echo $res['writer'];?></h6>
-          <p>ISBN : <span><?php echo $res['isbn'];?></span></p>
-          <h6 class="badge badge-success">
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star-o">
-                            </i>
-                        </h6>
-
-                        <input type="text" name="quantity" class="form-control" value="1">
-               <input type="hidden" name="hidden_name" value="<?php echo $res['name'];?>">
-               <input type="hidden" name="hidden_writer" value="<?php echo $res['writer'];?>">
-
-
-
-
-          </div>
-          <div class="btn-group d-flex">
-              <button class="btn btn-success flex-fill" name="add">Add to cart <i class=" fa fa-shopping-cart"></i></button>
-              <button class="btn btn-warning  flex-fill text-white" name="">Online <i class=" fa fa-book"></i></button>
-              
-
-          </div>
-
-      </div>
-    </form>
-
-      </div>
-
-      <?php
-
-    }
-    ?>
-
-
-  
-    
-
+    <br>
     
     
 
-</div>
-</div>
-<section id="footer">
-  
-<div class="container">
-  <div class="row">
-    <div class="col-md-4 footer-box">
-      <h4>Address <i class="fa fa-map-marker"></i></h4>
-      <p>House-21<br>Motijheel<br>Dhaka</p>
+    <div style="clear:both">
+
+
     </div>
-    <div class="col-md-4 footer-box">
-      <h4>Phone <i class="fa fa-phone"></i>
-
-      </h4>
-      <ul>
-        <li>
-          01767453687
-        </li>
-        <li>
-          01965348790
-        </li>
-        <li>
-          01897564323
-        </li>
-        <li>
-          01356795642
-        </li>
-      </ul>
-    </div>
-    <div class="col-md-4 footer-box">
-      <h4>Email <i class="fa fa-envelope"></i></h4>
-      <ul>
-        <li>
-          eva@gmail.com
-        </li>
-        <li>
-          rabita@gmail.com
-        </li>
-        <li>
-          sumaiya@gmail.com
-        </li>
-        <li>
-          sahal@gmail.com
-        </li>
-      </ul>
-    </div>
+   
     
-  </div>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <tr class="icon">
+                <th width="30%">Name</th>
+                <th width="30%">Writer Name</th>
+                <th width="10%">Quantity</th>
+                <th width="5%">Action</th>
 
-</div>       
-</section>
+                
+                
+            </tr>
+            <?php
+            if(!empty($_SESSION["shopping_cart"]))
+            {
+                //$total=0;
+                foreach($_SESSION["shopping_cart"] as $keys => $values)
+                {
+                    ?>
+                    <tr class="icon">
+                        <td><?php echo $values["item_name"] ; ?></td>
+                        <td><?php echo $values["item_writer"] ; ?></td>
+                        <td><?php echo $values["item_quantity"] ; ?></td>
+                        <td><a href="book.php?action=delete&id=<?php echo $values["item_id"] ;?>"><span class="text-danger"><i class="fa fa-trash"></i></span></a></td>
+
+                    </tr>
+                    <?php
+                }
+
+            }
+            ?>
+
+        </table>
+
+    </div>
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
