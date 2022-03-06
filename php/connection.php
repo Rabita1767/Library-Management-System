@@ -1,9 +1,9 @@
 <?php
-$username="root";
-$password="";
+$user="root";
+$pass="";
 $server="localhost";
 $db="webtech";
-$con=mysqli_connect($server,$username,$password,$db);
+$con=mysqli_connect($server,$user,$pass,$db);
 if($con)
 {
     ?>
