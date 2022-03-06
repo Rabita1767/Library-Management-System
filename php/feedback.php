@@ -87,13 +87,17 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
 	
 				?>
 				<div class="single-item">
-					<div class="single-item-sub">
-						<h4><?php echo $row['name']; ?></h4>
-						<a href="mailto:<?php echo $row['email']; ?>"><?php echo $row['email']; ?></a>
-						<br>
-						<p><?php echo $row['comment']; ?></p>
+					<div class="row">
+						<div class="col-6">
+							<h4><?php echo $row['name']; ?></h4>
+						</div>
+						<div class="col-6">
+							<a href="mailto:<?php echo $row['email']; ?>"><?php echo $row['email']; ?></a>
+						</div>
 
 					</div>
+						<p><?php echo $row['comment']; ?></p>
+
 				</div>
 				<?php
 	

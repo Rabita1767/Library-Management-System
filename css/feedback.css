@@ -251,6 +251,7 @@ h3 {
 .wrapper .form .input-group label {
     font-weight: 600;
     margin-bottom: 5px;
+    font-size: 30px;
     display: block;
 }
 
@@ -282,7 +283,7 @@ h3 {
     color: white;
     font-weight: 700;
     padding: 5px 10px;
-    background: transparent;
+    background-color: rgba(0, 0, 0, .7);
 }
 
 .wrapper .form .input-group.textarea {
@@ -300,23 +301,21 @@ h3 {
 .wrapper .prev-comments .single-item {
     height: 100%;
     width: 100%;
-    background: transparent;
+    background-color: rgba(0, 0, 0, .7);
     padding: 30px 40px;
-    text-align: left;
     margin-bottom: 25px;
     border: 2px solid tomato;
 }
 
-.single-item-sub {
-    margin-left: 100px;
+.wrapper .prev-comments .single-item .row .col-6 {
+    text-align: right;
 }
 
 .wrapper .prev-comments .single-item h4 {
-    text-align: left;
+    margin-left: 30px;
     font-size: 30px;
     font-weight: 800;
     color: white;
-    display: inline-block;
 }
 
 .wrapper .prev-comments .single-item a {
@@ -329,4 +328,5 @@ h3 {
     font-size: 20px;
     color: white;
     margin: 20px;
+    text-align: left;
 }
