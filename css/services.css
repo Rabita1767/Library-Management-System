@@ -1,0 +1,258 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 20px;
+    overflow-x: hidden;
+    color: wheat;
+    font-family: 'Flamenco', cursive;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url('../image/old-library-1.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 130vh;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.clearfix:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0px;
+    clear: both;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, .4);
+    ;
+}
+
+.row {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.left {
+    width: 25%;
+    float: left;
+}
+
+.right {
+    width: 75%;
+    float: right;
+    margin-left: auto;
+}
+
+h4 {
+    font-size: 300%;
+    float: left;
+    color: whitesmoke;
+    transform: translate(-50%, 0%);
+}
+
+.logo {
+    width: auto;
+    height: 120px;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav {
+    float: right;
+    margin-top: 70px;
+    font-weight: bold;
+}
+
+.main-nav li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 40px;
+    transform: translate(60%, 0%);
+}
+
+.main-nav li a {
+    padding: 4px 0;
+    color: whitesmoke;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 120%;
+    font-weight: lighter;
+}
+
+.main-nav li a:hover {
+    border-bottom: 2px solid rgb(255, 99, 71);
+    color: rgb(255, 99, 71);
+}
+
+.main {
+    width: 1180px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.first {
+    margin-bottom: 30px;
+    font-size: 60%;
+    letter-spacing: 3px;
+    font-weight: lighter;
+}
+
+h1 {
+    color: whitesmoke;
+    font-size: 240%;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+    margin: 20px 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h3 {
+    margin: 10px 0px;
+    color: whitesmoke;
+    font-weight: lighter;
+    font-size: 150%;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 200px;
+    transition: background-color .2s, border .2s, color .2;
+}
+
+.btn-sign {
+    background-color: rgba(255, 99, 71, .1);
+    ;
+    color: rgb(255, 99, 71);
+    margin-right: 15px;
+    border: 1px solid tomato;
+    font-size: 100%;
+}
+
+.btn-sign:hover {
+    background-color: whitesmoke;
+}
+
+.btn-show {
+    background-color: rgba(245, 245, 245, .2);
+    color: rgb(245, 245, 245);
+    margin-right: 15px;
+    border: 1px solid whitesmoke;
+    font-size: 100%;
+}
+
+.btn-show:hover {
+    background-color: rgb(255, 99, 71);
+    ;
+}
+
+.change1 {
+    animation: colorEva 2s infinite;
+}
+
+@keyframes colorEva {
+    0% {
+        color: yellow;
+    }
+    25% {
+        color: tomato;
+    }
+    50% {
+        color: violet;
+    }
+    100% {
+        color: tomato;
+    }
+}
+
+@media only screen and (max-width: 1180px) {
+    .main {
+        width: 100%;
+        padding: 0 2%;
+    }
+    h4 {
+        width: 100%;
+        padding: 0 4%;
+    }
+}
+
+@media only screen and (max-width: 998px) {
+    h1 {
+        font-size: 200%;
+    }
+    h3 {
+        font-size: 120%;
+    }
+    h4 {
+        font-size: 270%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 180%;
+    }
+    h3 {
+        font-size: 100%;
+    }
+    h4 {
+        font-size: 240%;
+    }
+    .main-nav {
+        display: none;
+    }
+}
+.skill .card img{
+    padding: 0px;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    border: 3px solid teal;
+    border-radius: 50%;
+}
+
+.skill .card h5{
+    color: teal;
+}
+
+       
+.skill .col-md-3{
+    margin: 20px auto;
+}
+
+.skill .col-md-3 div:hover{
+    background: teal;
+    color: #EDEDED;
+    z-index: 2;
+}
+
+.skill .col-md-3 div:hover h5{
+    color: whitesmoke;
+}
+
+.skill .col-md-3 div:hover img{
+    z-index: 3;
+    background-color: #EDEDED;
+    border: none;
+}
+.blog:hover{
+    transform:scale(1.1);
+    background-color: 
+    teal;
+    color: blanchedalmond;
+    z-index: 1;
+}
