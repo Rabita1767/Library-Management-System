@@ -197,7 +197,7 @@ return $filter_Result;
           
           <div class="btn-group d-flex">
               <button class="btn btn-success flex-fill" name="add">Add to cart <i class=" fa fa-shopping-cart"></i></button>
-              <h4 class="card-title pb-2 pt-2 text-white"><a href="online.php?id=<?php echo $res['id']?>"> <data-toggle="tooltip" data-placement="top" title="Preview">Online <i class="fa fa-book" aria-hidden="true"></i></h4>
+              <h4 ><a href="online.php?id=<?php echo $res['id']?>"> <data-toggle="tooltip" data-placement="top" title="Preview">Online <i class="fa fa-book" aria-hidden="true"></i></a></h4>
               
 
           </div>
