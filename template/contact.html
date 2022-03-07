@@ -22,11 +22,11 @@
                 </div>
                 <div class="right">
                     <ul class="main-nav animate__animated animate_slideInDown">
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">ABOUT US</a></li>
+                        <li><a href="../index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
                         <li><a href="#">SERVICES</a></li>
-                        <li><a href="#">BOOKS</a></li>
-                        <li><a href="#">FEEDBACK</a></li>
+                        <li><a href="../php/book.php">BOOKS</a></li>
+                        <li><a href="../php/feedback.php">FEEDBACK</a></li>
                         <li><a href="contact.html">CONTACT US</a></li>
                     </ul>
                 </div>
@@ -34,24 +34,24 @@
         </nav>
         <div class="main">
             <div class="contact-form">
-                <form method="POST" action="../php/contact.php" id="contact-form">
+                <form action="javascript:sendmail()" method="post">
                     <h2>Contact us</h2>
 
                     <p>
                         <label>First Name:</label>
-                        <input name="visitor_name" type="text" size="30" id="nme" pattern=[A-Z\sa-z]{3,20} required>
+                        <input name="visitor_name" type="text" size="30" id="Name" pattern=[A-Z\sa-z]{3,20} required>
                     </p>
                     <p>
                         <label>Email Address:</label>
-                        <input name="visitor_email" type="email" id="email" size="30">
+                        <input name="visitor_email" type="email" id="Sender" size="30">
                     </p>
                     <p>
                         <label>Subject:</label>
-                        <input name="Subject" type="text" id="subject" size="30">
+                        <input name="Subject" type="text" id="Subject" size="30">
                     </p>
                     <p>
                         <label>Message:</label>
-                        <textarea id="message" name="visitor_message" rows="6" cols="80" required></textarea>
+                        <textarea id="Message" name="visitor_message" rows="6" cols="80" required></textarea>
                     </p>
                     <button name="btn-send" type="submit" class="btn btn-success">Send</button>
 
@@ -59,6 +59,45 @@
             </div>
         </div>
     </header>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+        function sendmail() {
+
+            var name = $('#Name').val();
+            var email = $('#Sender').val();
+            var subject = $('#Subject').val();
+            var message = $('#Message').val();
+
+            // var body = $('#body').val();
+
+            var Body = 'Name: ' + name + '<br>Email: ' + email + '<br>Subject: ' + subject + '<br>Message: ' + message;
+            //console.log(name, phone, email, message);
+
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: 'me.sahal2000@gmail.com',
+                Password: "mdygegsfirllpfzz",
+                To: 'me.sahal2000@gmail.com',
+                From: "demo@gmail.com",
+                Subject: "New message on contact from " + name,
+                Body: Body
+            }).then(
+                message => {
+                    //console.log (message);
+                    if (message == 'OK') {
+                        alert('Your mail has been send. Thank you for connecting.');
+                    } else {
+                        console.error(message);
+                        alert('There is error at sending message. ')
+
+                    }
+
+                }
+            );
+        }
+    </script>
 </body>
 
 </html>
