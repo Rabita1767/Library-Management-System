@@ -92,9 +92,11 @@ if(isset($_GET['action']))
                         <li>
                             <a href="index.html">HOME</a></li>
                             <li><a href="">ABOUT US</a></li>
+                            <li> <a href="">SERVICES</a></li>
                             <li><a href="book.php">BOOKS</a></li>
-                           <li> <a href="">SERVICES</a></li>
-                           <li> <a href="">CONTACTS</a></li>
+                            <li><a href="feedback.php">FEEDBACK</a></li>
+                          
+                           <li> <a href="../template/contact.html">CONTACTS</a></li>
         
                           
                            
@@ -162,7 +164,10 @@ if(isset($_GET['action']))
         </table>
 
     </div>
+<div class="r2 mt-5">
+    <button type="submit"  class="btn btn-success">Proceed to continue <i class="fa fa-arrow-right"></i></button>
 
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>

@@ -48,9 +48,9 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
                         <li><a href="#">HOME</a></li>
                         <li><a href="#">ABOUT US</a></li>
                         <li><a href="#">SERVICES</a></li>
-                        <li><a href="php/book.php">BOOKS</a></li>
-                        <li><a href="php/feedback.php">FEEDBACK</a></li>
-                        <li><a href="template/contact.html">CONTACT US</a></li>
+                        <li><a href="book.php">BOOKS</a></li>
+                        <li><a href="feedback.php">FEEDBACK</a></li>
+                        <li><a href="../template/contact.html">CONTACT US</a></li>
                     </ul>
                 </div>
             </div>

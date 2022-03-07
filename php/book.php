@@ -63,7 +63,40 @@ if(isset($_GET['action']))
     }
 
 }
+if(isset($_POST['search']))
+{
+  $valueToSearch=$_POST['valueToSearch'];
+  $query= "select * from book1 where CONCAT(name,writer,category) LIKE '%".$valueToSearch."%' UNION SELECT * 
+  FROM `book1` 
+  WHERE   
+   `name` = '".$valueToSearch."'
+     OR `writer` = '".$valueToSearch."'
+     OR `category` = '".$valueToSearch."'
+     
+     
+    
+";
+
+     
+  
+  $search_result=filterTable($query);
+
+}
+else{
+  $query="select * from book1";
+  $search_result=filterTable($query);
+
+}
+function filterTable($query)
+{
+  $connect=mysqli_connect("localhost","root","","webtech");
+$filter_Result=mysqli_query($connect,$query)  or die( mysqli_error($connect));
+
+return $filter_Result;
+}
 ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -77,6 +110,7 @@ if(isset($_GET['action']))
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,300&family=Lato&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
 </head>
+<body>
 <div class="start">
         <section id="nav-bar">
             <div class="header">
@@ -89,9 +123,11 @@ if(isset($_GET['action']))
                         <li>
                             <a href="index.html">HOME</a></li>
                             <li><a href="">ABOUT US</a></li>
+                            <li> <a href="">SERVICES</a></li>
                             <li><a href="book.php">BOOKS</a></li>
-                           <li> <a href="">SERVICES</a></li>
-                           <li> <a href="">CONTACTS</a></li>
+                            <li><a href="feedback.php">FEEDBACK</a></li>
+                           
+                           <li> <a href="../template/contact.html">CONTACTS</a></li>
         
                           
                            
@@ -108,21 +144,23 @@ if(isset($_GET['action']))
 
     </div>
     </section>
-<body>
-    <div class="container text-center ">
-    <h1 class="title mt-5 ">LIST OF BOOKS</h1>
+
+<form action="book.php" method="post" class="search pl-5 mt-4"> 
+    <br>
+    <br>
+    <input type="text" name="valueToSearch" placeholder="Search by name,category or writer"><br><br>
+    <input type="submit" class="btn btn-success" name="search" value="Filter"><br><br>
     
+    </form>
+    <div class="container text-center ">
+   
+    <h1 class="title mt-0 ">LIST OF BOOKS</h1>
 
 
     <br>
     <div class="row">
     <?php
-    $selectquery="select * from book1";
-    $query=mysqli_query($con,$selectquery);
-    $nums=mysqli_num_rows($query);
-    while($res=mysqli_fetch_array($query))
-    {
-      ?>
+  while($res=mysqli_fetch_array($search_result)):?>
       <div class="col-lg-3 col-md-3 col-sm-12">
       <form action="book.php?action=add&id=<?php echo $res["id"];?>" method="post">
       <div class="card">
@@ -156,6 +194,7 @@ if(isset($_GET['action']))
 
 
           </div>
+          
           <div class="btn-group d-flex">
               <button class="btn btn-success flex-fill" name="add">Add to cart <i class=" fa fa-shopping-cart"></i></button>
               <button class="btn btn-warning  flex-fill text-white" name="">Online <i class=" fa fa-book"></i></button>
@@ -167,12 +206,9 @@ if(isset($_GET['action']))
     </form>
 
       </div>
+      <?php endwhile;?>
 
-      <?php
-
-    }
-    ?>
-
+      
 
   
     
