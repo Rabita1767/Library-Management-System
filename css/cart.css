@@ -2,9 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    
 }
-
 .navbar{
     height: 300vh;
     width: 100%;
@@ -161,22 +159,10 @@ ul{
     display:block;
     transform:translateY(17px);
 }
-#footer
-{
-   background-color: tomato;
-    color:#fff;
-    margin-top: 70px;
-}
-.footer-box
-{
-    margin-top: 25px;
-    font-weight: 500;
-}
-.r1
-{
+.fa-trash{color:#ff0000;}
+.icon{
     
-    background-color: tomato;
-   
-    
-
+    padding:8px 30px;
+   text-align:center;
+   color:black;
 }
