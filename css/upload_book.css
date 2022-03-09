@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-variant: small-caps;
+}
+body{
+    background-image: url(../media/paint3.jpg);
+    background-size: cover;
+    width: 100vw;
+    height: auto;
+}
+
+.signup{
+    margin-left: 50%;
+    width: 50vw;
+    height: auto;
+    margin: 16vh auto;
+    padding: 4vh;
+    background-color: azure;
+    color: rgb(16, 111, 235);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-variant: small-caps;
+}
+
+.logo{
+    font-family: cursive;
+    font-size: 25px;
+    color: rgb(3, 115, 135)!important;
+}
+
+.hero{
+    width: 100vw;
+    height: 30vw;
+}
+
+.hero img{
+    width: 100vw;
+    height: 30vw;
+    position: absolute;
+}
+
+.hero h1{
+    font-family: fantasy;
+    font-variant: small-caps;
+    font-style: italic;
+    font-style: bold;
+    position: relative;
+    margin: 0 auto;
+    top: 13vw;
+    bottom: 13vw;
+    font-size: 3.5vw;
+    color: white;
+}
+
+.product h1{
+    text-align: center;
+    margin: 10px auto;
+    color: rgb(3, 115, 135)!important;
+}

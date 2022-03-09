@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-variant: small-caps;
+}
+
+.heading{
+    text-align: center;
+    margin: 10px auto;
+    color: rgb(15, 130, 212);
+}
+
+.heading h3{
+    color: rgb(128, 180, 217);
+}
+
+.info .col-sm{
+    padding: 10px;
+    font-size: 20px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-variant: small-caps;
+}
+
+.logo{
+    font-family: cursive;
+    font-size: 25px;
+    color: rgb(3, 115, 135)!important;
+}
+
+.hero{
+    width: 100vw;
+    height: 30vw;
+}
+
+.hero img{
+    width: 100vw;
+    height: 30vw;
+    position: absolute;
+}
+
+.hero h1{
+    font-family: fantasy;
+    font-variant: small-caps;
+    font-style: italic;
+    font-style: bold;
+    position: relative;
+    margin: 0 auto;
+    top: 13vw;
+    bottom: 13vw;
+    font-size: 3.5vw;
+    color: white;
+}
+
+.product h1{
+    text-align: center;
+    margin: 10px auto;
+    color: rgb(3, 115, 135)!important;
+}
