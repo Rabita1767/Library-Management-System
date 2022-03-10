@@ -1,86 +1,134 @@
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    
-}
 
-.navbar{
-    height: 300vh;
-    width: 100%;
-    background: black;
-    padding-left: 5%;
-    padding-left: 5%;
+
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    position: relative;
-    
+    font-family:'Josefin Sans',sans-serif;
    
 }
-ul{
-    list-style: none;
+.ratri
+{
+    padding-top: 30px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 30px;
+   
+    background: rgb(236, 198, 198);
+    
+}
+.search .input
+{
+    border-color: rosybrown;
+    background-color: #fff;
+}
+.s1 .s2
+{
+    position: relative;
+    width: 400px;
+    height: 40px;
+    margin-left: 100px;
+    top: 20px ;
+   
+    font-size: 33px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    
+}
+.s1 .s2 .input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    font-size: 18px;
+    padding-left: 10px;
+}
+.s1 .s2 .btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    background: rosybrown;
+    z-index: 1;
+    cursor: pointer;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
 
 }
+.s1 .s2 .btn:hover{
+    background: skyblue;
 
-
-.header .navbar{
+}
+ .navbar{
     width:100%;
     height:80px;
     display:flex;
     justify-content: space-between;
-    align-items: center;
-    padding-top: 20px;
+   
+   
 }
-.header .navbar .logo a{
+ .navbar .logo a{
     margin-left: 100px;
     font-size: 33px;
-    font-weight: 1000;
+    font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 5px;
-    color: #6c5ce7!important;
-    text-decoration: none;
+    color: #fff!important;
 }
-.header .navbar .logo span {
+ .navbar .logo span {
     font-size: 33px;
-    color: tomato;
+    color: rosybrown;
 
 }
-.header .navbar .menu ul li{
+#nav
+{
+    padding-top: 30px;
+    padding-left: 250px;
+}
+.menu ul li{
     display: inline-block;
 }
-.header .navbar .menu ul li a{
+ .menu ul li a{
     position: relative;
-    color: #fff!important;
-    margin-left: 35px;
-   
+    color: black!important;
+    opacity: 0.7;
+    margin-right: 75px;
     font-size: 18px;
-    font-weight: 200;
+    font-weight: 500;
+    display: flex;
     align-items: center;
-    letter-spacing: 1px;
-    text-decoration: none;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
-.header .navbar .menu ul li a:after{
+.menu ul li a:after{
     position:absolute;
     left:0;
     top:35px;
     width:100%;
     height:4px;
-    background: #ff0c86;
+    background: blue;
     content:'';
     opacity: 0;
     transition: all 0.3s;
     border-radius: 6px;
 }
-.header .navbar .menu ul li a:hover:after{
+ .menu ul li a:hover:after{
     opacity:5;
 }
-.header .navbar .reg-btn a{
+.reg-btn a{
     display: block;
     padding: 14px 40px;
     font-size: 20px;
     font-weight: 200;
    
-    background: linear-gradient(45deg,#87adfe,tomato);
-    text-decoration: none;
+    background-image: linear-gradient(to right,#6c5ce7, rosybrown);
 
     margin-right: 100px;
     letter-spacing: 1px;
@@ -90,80 +138,135 @@ ul{
 
 
 }
-.new{
-    letter-spacing: 0.5x;
-    opacity: 0.7;
+ .reg-btn a:hover{
+    border: 2px solid rosybrown;
+    color: white!important;
+    background-color: #fff;
+
+}
+table{
+    border-collapse:collapse;
+    background-color:#fff;
+    box-shadow:0 10px 0 rgba(0,0,0,.03);
+    border-radius:10px;
+   
+
+}
+th,td{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom:1px solid #ffe0e0 ;
+    padding:8px 30px;
+   
+   color:grey;
+  
+}
+th{
+    text-transform:uppercase;
+    font-weight:500;
+    padding-top: 20px;
+    padding-left: 1px;
+   
+}
+#item
+{
+    margin-top: 60px;
+    margin-left: 210px;
+    margin-right: 75px;
+}
+.b1 .reg-btn
+{
+    margin-left: 32%;
+    background: rosybrown;
+    background-color: rosybrown;
+    border-radius: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border: none;
+    color: #fff!important;
+    display: flex;
+    justify-content: center;
     
+    
+
 }
+.b1 .reg-btn:hover
+{
+    margin-left: 32%;
+  
+    background-color: rgb(209, 108, 108);
+    border-radius: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.main-nav {
-    float: right;
-    margin-top: 70px;
-    font-weight: bold;
 }
-
-.main-nav li {
-    display: inline-block;
-    list-style: none;
-    margin-left: 40px;
-    transform: translate(60%, 0%);
+.b2{
+    margin-top: 20px;
 }
+.b2 a
+{
+  
+    background: rosybrown;
+    background-color: rosybrown;
+    border-radius: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border: none;
+    color: #fff!important;
+    display: flex;
+    justify-content: center;
+    
 
-.main-nav li a {
-    padding: 4px 0;
-    color: whitesmoke;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 120%;
-    font-weight: lighter;
 }
+.b2 a:hover
+{
+    
+  
+    background-color: rgb(209, 108, 108);
+    border-radius: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    
+    
 
-
-
-
-
-
-
-
-
-
-.title::before{
-    content:'';
-    background:tomato;
-    height:5px;
-    width:200px;
-    margin-left:auto;
-    margin-right:auto;
-    display:block;
-    transform:translateY(63px);
 }
-.title::after{
-    content:'';
-    background:tomato;
-    height:10px;
-    width:50px;
-    margin-left:auto;
-    margin-right:auto;
-    margin-bottom:50px;
-    display:block;
-    transform:translateY(17px);
+.b3 
+{
+    background-color: rosybrown;
+    background: rosybrown;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    padding-top: 5px;
+
+}
+.row .card
+{
+    border: 1px solid rosybrown;
+    border-radius: 15px;
+    
 }
 #footer
 {
-   background-color: tomato;
+   background-color: rosybrown;
     color:#fff;
     margin-top: 70px;
 }
@@ -171,12 +274,9 @@ ul{
 {
     margin-top: 25px;
     font-weight: 500;
+    padding-left: 140px;
 }
-.r1
-{
-    
-    background-color: tomato;
-   
-    
-
+.t1 a{
+    color: grey!important;
+    height: 10px;
 }
