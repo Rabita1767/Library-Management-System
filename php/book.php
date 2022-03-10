@@ -167,7 +167,7 @@ return $filter_Result;
           <h4 class="card-title pb-2 pt-2 text-white  r1"><?php echo $res['category'];?></h4>
 
           <div class="card-body">
-          <img src="<?php echo $res['image'];?>" alt="" class="img-fluid mb-2">
+          <img src="../book_image/<?php echo $res['image'];?>" alt="" class="img-fluid mb-2">
 
           <h5><?php echo $res['name'];?></h5>
 
