@@ -23,7 +23,7 @@ function validate_input_email($emailValue){
 // profile image
 function upload_profile($path, $file){
     $targetDir = $path;
-    $default = "beard.png";
+    $default = "../image/profile/beard.png";
 
     // get the filename
     $filename = basename($file['name']);

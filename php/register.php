@@ -45,6 +45,7 @@
                                 <input type="email" value="<?php if(isset($_POST['email'])) echo $_POST['email'];  ?>" required name="email" id="email" class="form-control" placeholder="Email*">
                             </div>
                         </div>
+                        
 
                         <div class="form-row my-4">
                             <div class="col">
