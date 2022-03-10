@@ -2,35 +2,39 @@
 $user="root";
 $pass="";
 $server="localhost";
-$db="art";
+$db="webtech";
 $con=mysqli_connect($server,$user,$pass,$db);
 
 
 
     if($con){
         if(isset($_POST['upload'])){
-            $ArtTitle=$_POST['ArtTitle'];
-            $Artist=$_POST['Artist'];
-            $Year=$_POST['Year'];
-            $Price=$_POST['Price'];
-            $Piece=$_POST['Piece'];
+            $id=$_POST['id'];
+            $isbn=$_POST['isbn'];
+            $name=$_POST['name'];
+            $writer=$_POST['writer'];
+            $category=$_POST['category'];
             $image= time().'_'.$_FILES['image']['name'];
-            $target='../user_image/'.$image;
-            $sqlFind="Select * from art_info where ArtTitle='$ArtTitle'";
+            $target='../book_image/'.$image;
+            $count=$_POST['count'];
+            $sqlFind="Select * from book1 where id='$id'";
             $resultFind=mysqli_query($con,$sqlFind);
             if(mysqli_num_rows($resultFind)>0){
-                echo '<script>alert("This Art is already uploaded.")</script>';
+                echo '<script>alert("This book is already uploaded.")</script>';
             }
             else{
-                $input="INSERT INTO art_info(ArtTitle,Artist,YearOfMaking,Price,Piece,`Image`) 
-                VALUES('$ArtTitle','$Artist','$Year','$Price','$Piece','$image')";
+                $input="INSERT INTO book1(id,isbn,name,writer,category,`image`,`count`) 
+                VALUES('$id','$isbn','$name','$writer','$category','$image','$count')";
                 $result= mysqli_query($con, $input);
+                echo $result;
                 if($result){
                     move_uploaded_file($_FILES['image']['tmp_name'], $target);
+                    echo "added";
                     //$_SESSION['Email']=$Email;
-                    header('location:art_table.php');
+                    // header('location:book.php');
                 }else{
-                    echo '<script>alert("Please enter your information once again.")</script>';
+                    echo "not added";
+                    // echo '<script>alert("Please enter your information once again.")</script>';
                 }
             }
         }
@@ -49,9 +53,8 @@ $con=mysqli_connect($server,$user,$pass,$db);
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/animate.css">
     <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" hre="../css/upload_book.css>
-
-<body style="background-image: url(../media/paint4.jpg);">
+    <link rel="stylesheet" href="../css/upload_book.css">
+<body style="background-image: url(../image/library11.jpg);">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand logo" href="#">Art Gallary</a>
@@ -77,33 +80,38 @@ $con=mysqli_connect($server,$user,$pass,$db);
     <div class="container signup text-danger" style="margin: 10vh auto; background-color: white;">
     <form method="post" action="" enctype="multipart/form-data">
         <div class="form-group">
-            <label for="inputName">Art Title</label>
-                <input type="text" class="form-control" id="inputName" name="ArtTitle">
+            <label for="inputName">Id</label>
+                <input type="number" class="form-control" id="inputName" name="id">
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="inputArtist">Artist</label>
-                <input type="text" class="form-control" id="inputArtist" name="Artist">
+                <label for="inputArtist">ISBN</label>
+                <input type="text" class="form-control" id="inputArtist" name="isbn">
             </div>
             <div class="form-group col-md-6">
-                <label for="inputYear">Year of making</label>
-                <input type="text" class="form-control" id="inputYear" name="Year">
+                <label for="inputYear">Book Name</label>
+                <input type="text" class="form-control" id="inputYear" name="name">
             </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="inputPrice">Price</label>
-                <input type="text" class="form-control" id="inputPrice" name="Price">
+                <label for="inputPrice">Writer</label>
+                <input type="text" class="form-control" id="inputPrice" name="writer">
             </div>
             <div class="form-group col-md-6">
-                <label for="inputNumber">Piece</label>
-                <input type="number" class="form-control" id="inputNumber" name="Piece" min="1" max="50">
+                <label for="inputNumber">Category</label>
+                <input type="text" class="form-control" id="inputNumber" name="category" min="1" max="50">
             </div>
         </div>
-        <label for="custome-file">Upload image of art</label>
+        <label for="custome-file">Upload Book</label>
         <div class="custom-file">
     <input type="file" class="custom-file-input" id="customFile" name="image">
     <label class="custom-file-label" for="customFile">Choose file</label>
+    <div class="form-group col-md-6">
+                <label for="inputNumber">Count</label>
+                <input type="number" class="form-control" id="inputNumber" name="count" min="1" max="50">
+            </div>
+        </div>
   </div>
         <button type="submit" class="btn btn-danger mt-2" name="upload">Upload</button> 
             
