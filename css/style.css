@@ -47,6 +47,8 @@ nav {
     width: 75%;
     float: right;
     margin-left: auto;
+    margin-right: 0%;
+    padding-left: 0%;
 }
 
 h4 {
@@ -58,7 +60,7 @@ h4 {
 
 .logo {
     width: auto;
-    height: 120px;
+    height: 100px;
     float: left;
     margin-top: 20px;
 }
@@ -72,17 +74,24 @@ h4 {
 .main-nav li {
     display: inline-block;
     list-style: none;
-    margin-left: 40px;
-    transform: translate(60%, 0%);
+    margin-left: 25px;
+    transform: translate(50%, -10%);
 }
 
 .main-nav li a {
-    padding: 4px 0;
+    padding: 3px 0;
     color: whitesmoke;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 120%;
     font-weight: lighter;
+}
+
+.main-nav li a img{
+    height: 10%;
+    width: 10%;
+    
+
 }
 
 .main-nav li a:hover {

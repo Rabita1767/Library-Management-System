@@ -30,7 +30,7 @@ if(empty($error)){
     if (!empty($row)){
         // verify password
         if(password_verify($password, $row['password'])){
-            header("location: indexlog.php");
+            header("location: ../template/admin_index.html ");
             exit();
         }
     }else{

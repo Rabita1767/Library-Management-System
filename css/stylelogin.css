@@ -1,12 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
 
 :root{
-    --font-ubuntu: 'Ubuntu', monospace;
+    /*--font-ubuntu: 'Ubuntu', monospace;*/
+    font-family: 'Flamenco', cursive;
     --color-border: #e5e5e5;
 }
 
 .font-ubuntu{
     font: normal 500 16px var(--font-ubuntu);
+}
+body {
+    font-size: 20px;
+    overflow-x: hidden;
+    color: wheat;
+    font-family: 'Flamenco', cursive;
 }
 
 #register, #login-form {
