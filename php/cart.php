@@ -149,7 +149,7 @@ return $filter_Result;
      <div class="menu">
                 <ul>
                     <li class="r1">
-                        <a href="">Category</a></li>
+                        <a href="../index.html">Home</a></li>
                         <li><a href="aboutdemo.php">Services</a></li>
                        <li> <a href="book.php">Book</a></li>
                        <li> <a href="servicedemo.php">Services</a></li>

@@ -95,8 +95,8 @@ h4 {
 }
 
 .main-nav li a:hover {
-    border-bottom: 2px solid rgb(255, 99, 71);
-    color: rgb(255, 99, 71);
+    border-bottom: 2px solid rgb(209, 108, 108);
+    color: rgb(209, 108, 108);
 }
 
 .main {
@@ -146,9 +146,9 @@ h3 {
 .btn-sign {
     background-color: rgba(255, 99, 71, .1);
     ;
-    color: rgb(255, 99, 71);
+    color: rgb(209, 108, 108);
     margin-right: 15px;
-    border: 1px solid tomato;
+    border: 1px solid rgb(209, 108, 108);
     font-size: 100%;
 }
 
@@ -165,7 +165,7 @@ h3 {
 }
 
 .btn-show:hover {
-    background-color: rgb(255, 99, 71);
+    background-color: rgb(209, 108, 108);
     
 }
 
@@ -184,7 +184,7 @@ h3 {
         color: violet;
     }
     100% {
-        color: tomato;
+        color: rgb(209, 108, 108);
     }
 }
 

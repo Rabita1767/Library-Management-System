@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Library</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Flamenco&display=swap" rel="stylesheet">
@@ -26,12 +30,9 @@
                       
 
                         <li><a href="index.html">HOME</a></li>
-                        <li><a href="template/about.html">ABOUT US</a></li>
 
-                        <li><a href="#">SERVICES</a></li>
-                        <li><a href="php/book.php">BOOKS</a></li>
-                        <li><a href="php/feedback.php">FEEDBACK</a></li>
-                        <li><a href="template/contact.html">CONTACT US</a></li>
+                        <li><a href="adminbook.php">BOOKS</a></li>
+                        <li> <a href=""><?php echo $_SESSION["email"];?></a></li>
                     </ul>
                 </div>
             </div>
@@ -43,7 +44,7 @@
                 Welcome to our <span class="change">Online library</span>.<br>
             </h1>
             <h3>House of thoughts and knowledge.</h3>
-            <a href="php/loginas.php" class="btn btn-sign">Sign Up</a>
+            <a href="logout.php" class="btn btn-sign">Log Out</a>
             <a href="#" class="btn btn-show">Show more..</a>
         </div>
     </header>

@@ -154,7 +154,7 @@ return $filter_Result;
                         <li><a href="aboutdemo.php">Services</a></li>
                        <li> <a href="book.php">Book</a></li>
                        
-                       <li class="reg-btn"> <a href="cart.php">Cart</a></li>
+                       <li class="reg-btn"> <a href="logout.php">Log Out</a></li>
                        
                     
                 </ul>
@@ -232,12 +232,8 @@ return $filter_Result;
      <input type="hidden" name="hidden_writer" value="<?php echo $res['writer'];?>">
 
       </div>
-      <div class="b1">
-      <button class="reg-btn" name="add">Add to cart <i class=" fa fa-shopping-cart"></i></button> 
-
-      </div>
       <div class="b2">
-      <a href="pdf.php?id=<?php echo $res['id']?>"> <data-toggle="tooltip" data-placement="top" title="Preview">Online <i class="fa fa-book" aria-hidden="true"></i></a>
+      <a href="delete.php?idth=<?php echo $res['id']?>"> <data-toggle="tooltip" data-placement="top" title="DELETE"><i class="fa fa-trash" aria-hidden="true"></i></a>
 
       </div>
     </div>

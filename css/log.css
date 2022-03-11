@@ -4,7 +4,7 @@
     /*--font-ubuntu: 'Ubuntu', monospace;*/
     --font-flamenco: 'Flamenco', cursive;
     color: wheat;
-    --color-border: tomato;
+    --color-border: rgb(209, 108, 108);
 }
 
 .font-flamenco{
@@ -22,7 +22,7 @@
     
 }
 h1{
-    color: tomato
+    color: rgb(209, 108, 108);
 }
 p,span{
     color: white;
@@ -38,7 +38,7 @@ textarea {
     color: white;
 }
 .btn{
-    background-color: tomato;
+    background-color: rgb(209, 108, 108);
     border: 2px solid wheat;
     margin: 2%;
     color: black;
