@@ -111,7 +111,7 @@ return $filter_Result;
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
  <link rel="preconnect" href="https://fonts.gstatic.com">
 
-    <title>Document</title>
+    <title>List of books</title>
 </head>
 <body>
    <div class="ratri">

@@ -64,73 +64,108 @@ if(isset($_GET['action']))
     }
 
 }
-?>
+if(isset($_POST['search']))
+{
+  $valueToSearch=$_POST['valueToSearch'];
+  $query= "select * from book1 where CONCAT(name,writer,category) LIKE '%".$valueToSearch."%' UNION SELECT * 
+  FROM `book1` 
+  WHERE   
+   `name` = '".$valueToSearch."'
+     OR `writer` = '".$valueToSearch."'
+     OR `category` = '".$valueToSearch."'
+     
+     
+    
+";
 
-<!DOCTYPE html>
-<html>
+     
+  
+  $search_result=filterTable($query);
+
+}
+else{
+  $query="select * from book1";
+  $search_result=filterTable($query);
+
+}
+function filterTable($query)
+{
+  $connect=mysqli_connect("localhost","root","","webtech");
+$filter_Result=mysqli_query($connect,$query)  or die( mysqli_error($connect));
+
+return $filter_Result;
+}
+?>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Cart Item</title>
-  <link rel="stylesheet" type="text/css" href="../css/cart.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="../css/newcart.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+ 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,300&family=Lato&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+
+    <title>Cart items</title>
 </head>
 <body>
-<div class="start">
-        <section id="nav-bar">
-            <div class="header">
-            <div class="navbar">
-                <div class="logo">
-                    <a href="">Online<span> Library</span></a>
-                </div>
-                <div class="menu">
-                    <ul>
-                        <li>
-                            <a href="index.html">HOME</a></li>
-                            <li><a href="">ABOUT US</a></li>
-                            <li> <a href="">SERVICES</a></li>
-                            <li><a href="book.php">BOOKS</a></li>
-                            <li><a href="feedback.php">FEEDBACK</a></li>
-                          
-                           <li> <a href="../template/contact.html">CONTACTS</a></li>
-        
-                          
-                           
-                           
+   <div class="ratri">
+     <div class="row">
+       <div class="col-md-6">
+         <div class="navbar">
+         <div class="logo">
+                <a href="indexnew.php">Online<span> Library</span></a>
+            </div>
+         </div>
+
+
+       </div>
+       <div class="col-md-6">
+       <form action="book.php"  method="post" >
+            <div class="search">
+            <div class="s1">
+                <div class="s2">
+                    <input type="text" class="input"  name="valueToSearch" >
+                    <div class="btn btn_common">
+                    <input type="submit" class="btn btn-success" name="search" value="Filter">
                         
-                    </ul>
-                </div>
-        
-                <div class="reg-btn">
-                    <a href="cart.php">CARTS</a>
+
+                    </div>
                 </div>
             </div>
-        
+        </div>
+            </form>
 
-    </div>
-    </section>
-<body>
-    <div class="container text-center ">
-    <h1 class="title mt-5 ">Booking Detail</h1>
-    
+       </div>
+     </div>
+   </div>
+   <section id="nav">
+     <div class="container">
+     <div class="menu">
+                <ul>
+                    <li class="r1">
+                        <a href="">Category</a></li>
+                        <li><a href="aboutdemo.php">Services</a></li>
+                       <li> <a href="book.php">Book</a></li>
+                       <li> <a href="servicedemo.php">Services</a></li>
+                       <li class="reg-btn"> <a href="cart.php">Cart</a></li>
+                       
+                    
+                </ul>
+                
+            </div>
+            <div class="row">
+              <div class="col-md-4">
 
 
-    <br>
-    <br>
-    
-    
-
-    <div style="clear:both">
-
-
-    </div>
-   
-    
-    <div class="table-responsive">
+              </div>
+              <div class="col-md-8">
+              <div class="table-responsive">
         <table class="table table-bordered">
             <tr class="icon">
                 <th width="30%">Name</th>
@@ -164,15 +199,78 @@ if(isset($_GET['action']))
         </table>
 
     </div>
-<div class="r2 mt-5">
-    <button type="submit"  class="btn btn-success">Proceed to continue <i class="fa fa-arrow-right"></i></button>
+    <div class="b2">
+      <a href=""> <data-toggle="tooltip" data-placement="top" title="Proceed">Proceed to pay <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 
-</div>
+      </div>
+
+
+              </div>
+            </div>
+            
+
+     </div>
+
+   </section>
+   
+   <section id="footer">
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 footer-box">
+        <h4>Address <i class="fa fa-map-marker"></i></h4>
+        <p>House-21<br>Motijheel<br>Dhaka</p>
+      </div>
+      <div class="col-md-4 footer-box">
+        <h4>Phone <i class="fa fa-phone"></i>
+  
+        </h4>
+        <ul>
+          <li>
+            01767453687
+          </li>
+          <li>
+            01965348790
+          </li>
+          <li>
+            01897564323
+          </li>
+          <li>
+            01356795642
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4 footer-box">
+        <h4>Email <i class="fa fa-envelope"></i></h4>
+        <ul>
+          <li>
+            eva@gmail.com
+          </li>
+          <li>
+            rabita@gmail.com
+          </li>
+          <li>
+            sumaiya@gmail.com
+          </li>
+          <li>
+            sahal@gmail.com
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+  
+  </div>       
+  </section>
+
+      
+
+
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
+    
 </body>
 </html>
