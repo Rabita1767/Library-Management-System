@@ -1,25 +1,51 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Flamenco&display=swap');
 
 :root{
     /*--font-ubuntu: 'Ubuntu', monospace;*/
-    font-family: 'Flamenco', cursive;
-    --color-border: #e5e5e5;
-}
-
-.font-ubuntu{
-    font: normal 500 16px var(--font-ubuntu);
-}
-body {
-    font-size: 20px;
-    overflow-x: hidden;
+    --font-flamenco: 'Flamenco', cursive;
     color: wheat;
-    font-family: 'Flamenco', cursive;
+    --color-border: tomato;
 }
 
-#register, #login-form {
+.font-flamenco{
+    font: normal 500 16px var(--font-flamenco);
+}
+
+#register, #login-form{
     padding: 5% 0;
-    background: url("../image/old-library-1.jpg") no-repeat;
+    background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .9)), url('../image/old-library-1.jpg');
     background-size: cover;
+    width: 100%;
+    height: 130vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+h1{
+    color: tomato
+}
+p,span{
+    color: white;
+}
+.nav-link span{
+    color: rgb(80, 78, 78);
+}
+
+textarea {
+    margin: 2%;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+}
+.btn{
+    background-color: tomato;
+    border: 2px solid wheat;
+    margin: 2%;
+    color: black;
+    
+}
+.form-control{
+    color: bisque;
 }
 
 #login-form{
@@ -28,7 +54,7 @@ body {
 
 #register .upload-profile-image{
     position: relative;
-    width: 10%;
+    width: 5%;
     margin-left: auto;
     margin-right: auto;
     transition: filter .8s ease;
@@ -42,17 +68,17 @@ body {
     position: absolute;
     top: 0;
     z-index: 10;
-    width: 200px;
+    width: 100px;
     margin-top: 0px;
-    opacity: 0;
+    opacity: .1;
 }
 
 #upload-profile::-webkit-file-upload-button{
-    visibility: hidden;
+    visibility:visible;
 }
 
 #upload-profile::before{
-    content: ' ';
+    content: '';
     display: inline-block;
     width: 200px;
     height: 200px;
@@ -78,9 +104,11 @@ body {
 #log-form input[type='email'],
 #log-form input[type='password']{
     border: none;
-    border-radius: unset;
+    border-radius: 5%;
+    color: antiquewhite;
+    background: transparent;
     border-bottom: 1px solid var(--color-border);
-    font-family: var(--font-ubuntu);
+    font-family: var(--font-flamenco);
 }
 
 #reg-form input[type='text'],
@@ -92,10 +120,3 @@ body {
     outline: none;
     box-shadow: none;
 }
-
-
-
-
-
-
-

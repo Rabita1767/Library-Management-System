@@ -75,7 +75,7 @@ h4 {
     display: inline-block;
     list-style: none;
     margin-left: 25px;
-    transform: translate(50%, -10%);
+    transform: translate(50%, 0%);
 }
 
 .main-nav li a {
