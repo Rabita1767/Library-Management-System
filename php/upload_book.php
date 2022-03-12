@@ -25,6 +25,7 @@ $con=mysqli_connect($server,$user,$pass,$db);
             else{
                 $sql="INSERT INTO book1(isbn,name,writer,category,`image`,`count`,`link`) 
                 VALUES('$isbn','$name','$writer','$category','$image','$count','a')";
+                
                 $result= mysqli_query($con, $sql);
                 if($result){
                     move_uploaded_file($_FILES['image']['tmp_name'], $target);
