@@ -1,10 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     /* font-family: poppins; */
     box-sizing: border-box;
     font-family: 'Flamenco', cursive;
 }
+
 .clearfix:after {
     content: ".";
     visibility: hidden;
@@ -12,6 +13,7 @@
     height: 0px;
     clear: both;
 }
+
 header {
     background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url('../image/old-library-1.jpg');
     background-size: cover;
@@ -23,7 +25,6 @@ header {
 
 nav {
     background-color: rgba(0, 0, 0, .4);
-    
 }
 
 .row {
@@ -211,25 +212,25 @@ h3 {
     }
 }
 
-
-body{
+body {
     /* min-height: 100vh; */
     /* display: flex; */
     /* align-items: center; */
     /* justify-content: center; */
     /* background-color: white; */
-/* background-color: #c5c5c5; */
+    /* background-color: #c5c5c5; */
     /* color: #142850; */
     font-size: 16px;
     overflow-x: hidden;
     color: whitesmoke;
     font-family: 'Flamenco', cursive;
-
 }
-.about{
+
+.about {
     text-align: left;
 }
-.me{
+
+.me {
     float: left;
     width: 210px;
     height: 200px;
@@ -237,96 +238,101 @@ body{
     margin-right: 30px;
 }
 
-.about-section{
+.about-section {
     /* background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url('../image/old-library-1.jpg'); */
     background-size: cover;
-    
     margin-top: 0px;
     width: 95%;
     height: 60vh;
     margin-bottom: 40px;
     /* background-color: #142850 ; */
     overflow: hidden;
-    padding: 30px ;
+    padding: 30px;
     margin-left: 28px;
-        margin-right: 60px;
-    
-
+    margin-right: 60px;
 }
-.inner-container{
+
+.inner-container {
     background: transparent;
     margin-right: 50px;
     margin-top: 10px;
-width:90%;
-float:right;
-/* background-color: whitesmoke; */
-color: whitesmoke;
-padding:80px;
-margin-bottom: 40px;
+    width: 90%;
+    float: right;
+    /* background-color: whitesmoke; */
+    color: whitesmoke;
+    padding: 80px;
+    margin-bottom: 40px;
 }
-.inner-container h1{
+
+.inner-container h1 {
     margin-top: 0px;
     margin-bottom: 40px;
-    font-size:30px;
-    font-weight:1000px;
+    font-size: 30px;
+    font-weight: 1000px;
     color: tomato;
-
 }
-.text{
+
+.text {
     font-size: 20px;
     color: whitesmoke;
     line-height: 1.5;
     text-align: justify;
     margin-bottom: 40px;
 }
+
+
 /* .skills{
     display: flex;
     justify-content: space-between;
     font-weight: 700;
     font-size: 13px;
 } */
-@media screen and (max-width:1200px){
-    .inner-container{
+
+@media screen and (max-width:1200px) {
+    .inner-container {
         padding: 80px;
     }
-    
 }
 
-@media screen and (max-width:1000px){
-    .about-section{
+@media screen and (max-width:1000px) {
+    .about-section {
         background-size: 100%;
         padding: 100px 40px;
     }
-    .inner-container{
+    .inner-container {
         width: 100%;
     }
-    
 }
-@media screen and (max-width:600px){
-    .about-section{
-       padding: 0;
+
+@media screen and (max-width:600px) {
+    .about-section {
+        padding: 0;
     }
-    .inner-container{
-     padding:60px;
+    .inner-container {
+        padding: 60px;
     }
-    
 }
-*,*:before,*:after{
+
+*,
+*:before,
+*:after {
     box-sizing: border-box;
 }
-body{
+
+body {
     /* font-family: poppins; */
     margin: 0;
     display: grid;
     /* font-size: 14px; */
 }
-main{
+
+main {
     /* display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex; */
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
     color: whitesmoke;
     line-height: 1.5;
@@ -334,53 +340,52 @@ main{
     /* text-transform: */
     /* font-weight: bold; */
     background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url('../image/old-library-1.jpg');
-
     padding-top: 20px;
     padding-bottom: 20px;
-
 }
 
-.cardd2{
-    
+.cardd2 {
     margin-left: 10px;
     /* padding-left:20px; */
     width: 100%;
     height: 450px;
 }
-.cardd2 .card-body
-{
+
+.cardd2 .card-body {
     background-color: whitesmoke;
-    font-size:15px;
-    color:#142850;
+    font-size: 15px;
+    color: #142850;
 }
-.cardd1 .card-body
-{
+
+.cardd1 .card-body {
     background-color: whitesmoke;
-    font-size:15px;
-    color:#142850;
+    font-size: 15px;
+    color: #142850;
 }
-.accordion-item
-{
+
+.accordion-item {
     background-color: whitesmoke;
 }
-.cardd1{
-    margin-right:5px;
-   margin-left: 0px;
-   height: 450px;
-  
+
+.cardd1 {
+    margin-right: 5px;
+    margin-left: 0px;
+    height: 450px;
     width: 100%;
 }
-.cardclr{
+
+.cardclr {
     color: tomato;
     font-weight: bold;
-    
 }
-.cardclr1{
-    color: #142850 ;
+
+.cardclr1 {
+    color: #142850;
     font-size: 18px;
-margin-top: 30px;
+    margin-top: 30px;
 }
-    .faq1{
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
+
+.faq1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}

@@ -10,11 +10,11 @@ include "helper.php";
 <?php
     $user = array();
     require ('mysqli_connect.php');
-
+    
     if(isset($_SESSION['userID'])){
         $user = get_user_info($con, $_SESSION['userID']);
     }
-
+    
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         require ('login-process.php');
     }
