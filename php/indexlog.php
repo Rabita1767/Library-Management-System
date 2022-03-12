@@ -40,10 +40,10 @@ if(isset($_SESSION['userID'])){
                       
 
                         <li><a href="../index.html">HOME</a></li>
-                        <li><a href="about.html">ABOUT US</a></li>
+                        <li><a href="../template/about.html">ABOUT US</a></li>
                         
 
-                        <li><a href="#">SERVICES</a></li>
+                        <li><a href="../templa">SERVICES</a></li>
                         <li><a href="../php/book.php">BOOKS</a></li>
                         <li><a href="../php/feedback.php">FEEDBACK</a></li>
                         <li><a href="contact.html">CONTACT US</a></li>
