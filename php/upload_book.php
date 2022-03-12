@@ -52,7 +52,6 @@ $con=mysqli_connect($server,$user,$pass,$db);
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/animate.css">
-    <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/upload_book.css">
 <body style="background-image: url(../image/old-library-1.jpg); background-size: cover; width: 100vw; height: auto;">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -114,8 +113,13 @@ $con=mysqli_connect($server,$user,$pass,$db);
                 <input type="number" class="form-control" id="inputNumber" name="count" min="1" max="50">
             </div>
         </div>
+        <div class="form-group col-md-6">
+                <label for="inputNumber">Link</label>
+                <input type="varchar" class="form-control" id="inputNumber" name="link" min="1" max="50">
+            </div>
   </div>
-        <button type="submit" class="btn btn-danger mt-2" name="upload">Upload</button> 
+        <button type="submit" class="btn btn-danger mt-2 buton" style=" margin-left: 45%; margin-top:0px;
+    width: 10vw; height:40px;"name="upload">Upload</button> 
             
         <!-- <a class="btn btn-info" href="customer_query.html" role="button">Log in</a> -->
     </form>
