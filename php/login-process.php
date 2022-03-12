@@ -1,4 +1,5 @@
 <?php
+session_start();
 $error = array();
 
 $email = validate_input_email($_POST['email']);
@@ -30,7 +31,8 @@ if(empty($error)){
     if (!empty($row)){
         // verify password
         if(password_verify($password, $row['password'])){
-            header("location: ../template/welcome.html ");
+            $_SESSION['email']=$email;
+            header("location:welcome.php ");
             exit();
         }
     }else{
