@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,6 +36,7 @@
                         <li><a href="../php/book.php">BOOKS</a></li>
                         <li><a href="../php/feedback.php">FEEDBACK</a></li>
                         <li><a href="contact.html">CONTACT US</a></li>
+                        <li> <a href=""><?php echo $_SESSION["email"];?></a></li>
                        
                         <li><a href="../php/indexlog.php"><img src="../image/log.png" alt=""></a></li>
                     </ul>

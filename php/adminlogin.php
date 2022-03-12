@@ -20,6 +20,7 @@ $row=mysqli_fetch_array($res);
 if(($row['email']==$email) && ($row['password']==$pass))
 {
     $_SESSION['email']=$email;
+   
         header("location:adminindex.php");
 
 
