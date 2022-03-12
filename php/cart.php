@@ -153,7 +153,7 @@ return $filter_Result;
                         <li><a href="aboutdemo.php">Services</a></li>
                        <li> <a href="book.php">Book</a></li>
                        <li> <a href="servicedemo.php">Services</a></li>
-                       <li class="reg-btn"> <a href="cart.php">Cart</a></li>
+                       <li class="reg-btn"> <a href="logout.php">Log out</a></li>
                        
                     
                 </ul>

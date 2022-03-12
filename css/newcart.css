@@ -336,3 +336,13 @@ margin-top: 200px;
     background-image: linear-gradient(to right,#6c5ce7,#ff0c86);
     
 }
+@page
+{
+    size:A4;
+    margin:0;
+}
+#print-btn
+{
+    display: none;
+    visibility: none;
+}
