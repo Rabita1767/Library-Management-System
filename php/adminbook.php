@@ -208,7 +208,7 @@ return $filter_Result;
     <form action="book.php?action=add&id=<?php echo $res["id"];?>" method="post">
     <div class="card">
       <div class="card-body">
-      <img src="<?php echo $res['image'];?>" alt="" class="img-fluid mb-2">
+      <img src="../image/<?php echo $res['image'];?>" alt="" class="img-fluid mb-2">
 
 <h5><?php echo $res['name'];?></h5>
 

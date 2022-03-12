@@ -54,7 +54,7 @@ $con=mysqli_connect($server,$user,$pass,$db);
     <link rel="stylesheet" href="../css/animate.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/upload_book.css">
-<body style="background-image: url(../image/library11.jpg);">
+<body style="background-image: url(../image/old-library-1.jpg); background-size: cover; width: 100vw; height: auto;">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand logo" href="#">Art Gallary</a>
@@ -77,7 +77,9 @@ $con=mysqli_connect($server,$user,$pass,$db);
             </div>
         </div>
     </nav>
-    <div class="container signup text-danger" style="margin: 10vh auto; background-color: white;">
+    <div class="container signup text-danger" style="margin-left: 50%; width: 50vw; height: auto; margin: 16vh auto; padding: 4vh;
+    background-color:black;
+    color: whitesmoke;">
     <form method="post" action="" enctype="multipart/form-data">
         <div class="form-group">
             <label for="inputName">Id</label>
