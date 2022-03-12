@@ -14,7 +14,7 @@ if(isset($_SESSION['userID'])){
 
 ?>
 
-<section id="main-site">
+<section id="main-site" class="ind">
     <div class="container py-5">
         <div class="row">
             <div class="col-4 offset-4 shadow py-4">
