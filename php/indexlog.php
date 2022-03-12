@@ -37,16 +37,12 @@ if(isset($_SESSION['userID'])){
                 <div class="right">
                     <ul class="main-nav ">
 
-                      
-
                         <li><a href="../index.html">HOME</a></li>
-                        <li><a href="about.html">ABOUT US</a></li>
-                        
-
-                        <li><a href="#">SERVICES</a></li>
+                        <li><a href="../template/about.html">ABOUT US</a></li>
+                        <li><a href="../template/services.html">SERVICES</a></li>
                         <li><a href="../php/book.php">BOOKS</a></li>
                         <li><a href="../php/feedback.php">FEEDBACK</a></li>
-                        <li><a href="contact.html">CONTACT US</a></li>
+                        <li><a href="../template/contact.html">CONTACT US</a></li>
                         <li><a href="../php/indexlog.php"><img src="../image/log.png" alt=""></a></li>
                     </ul>
                 </div>

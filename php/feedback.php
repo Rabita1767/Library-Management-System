@@ -47,7 +47,7 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
 				<ul class="main-nav animate__animated animate_slideInDown">
                         <li><a href="../index.html">HOME</a></li>
                         <li><a href="../template/about.html">ABOUT US</a></li>
-                        <li><a href="#">SERVICES</a></li>
+                        <li><a href="../template/services.html">SERVICES</a></li>
                         <li><a href="book.php">BOOKS</a></li>
                         <li><a href="feedback.php">FEEDBACK</a></li>
                         <li><a href="../template/contact.html">CONTACT US</a></li>

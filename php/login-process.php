@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $error = array();
 
 $email = validate_input_email($_POST['email']);
@@ -18,6 +18,7 @@ if(empty($error)){
     $q = mysqli_stmt_init($con);
     mysqli_stmt_prepare($q, $query);
 
+
     // bind parameter
     mysqli_stmt_bind_param($q, 's', $email);
     //execute query
@@ -30,7 +31,10 @@ if(empty($error)){
     if (!empty($row)){
         // verify password
         if(password_verify($password, $row['password'])){
-            header("location: ../template/welcome.html ");
+            $_SESSION['email']=$email;
+            $_SESSION['firstName']=$firstName;
+            $_SESSION['lastName']=$lastName;
+            header("location:welcome.php ");
             exit();
         }
     }else{

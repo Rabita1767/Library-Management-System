@@ -33,7 +33,7 @@
                         
                       
                        
-                       <li class="reg-btn"> <a href="cart.php">Cart</a></li>
+                       
                        
                     
                 </ul>

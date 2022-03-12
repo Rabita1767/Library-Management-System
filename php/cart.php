@@ -153,7 +153,7 @@ return $filter_Result;
                         <li><a href="aboutdemo.php">Services</a></li>
                        <li> <a href="book.php">Book</a></li>
                        <li> <a href="servicedemo.php">Services</a></li>
-                       <li class="reg-btn"> <a href="cart.php">Cart</a></li>
+                       <li class="reg-btn"> <a href="logout.php">Log out</a></li>
                        
                     
                 </ul>
@@ -196,11 +196,11 @@ return $filter_Result;
             }
             ?>
 
-        </table>
+      </table>
 
     </div>
     <div class="b2">
-      <a href=""> <data-toggle="tooltip" data-placement="top" title="Proceed">Proceed to Continue<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+      <a href="pdf_generator.php"> <data-toggle="tooltip" data-placement="top" title="Proceed">Proceed to Continue<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 
       </div>
 

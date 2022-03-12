@@ -30,7 +30,7 @@ if (empty($confirm_pwd)){
 }
 
 $files = $_FILES['profileUpload'];
-$profileImage = upload_profile('./image/profile/', $files);
+$profileImage = upload_profile('../image/profile', $files);
 
 if(empty($error)){
     // register a new user
@@ -53,13 +53,15 @@ if(empty($error)){
     // execute statement
     mysqli_stmt_execute($q);
 
-    if(mysqli_stmt_affected_rows($q) == 1){
+    if(mysqli_stmt_affected_rows($q) > 1){
 
         // start a new session
         session_start();
 
         // create session variable
         $_SESSION['userID'] = mysqli_insert_id($con);
+      $_SESSION['firstName']=$firstName;
+      $_SESSION['firstName']=$firstName;
 
         header('location: login.php');
         exit();

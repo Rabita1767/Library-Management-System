@@ -10,11 +10,11 @@ include "helper.php";
 <?php
     $user = array();
     require ('mysqli_connect.php');
-
+    
     if(isset($_SESSION['userID'])){
         $user = get_user_info($con, $_SESSION['userID']);
     }
-
+    
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         require ('login-process.php');
     }
@@ -33,7 +33,7 @@ include "helper.php";
             </div>
             <div class="upload-profile-image d-flex justify-content-center pb-5">
                 <div class="text-center">
-                    <img src="<?php echo isset($user['profileImage']) ? $user['profileImage'] : "../image/profile/beard.png" ; ?>" style="width: 200px; height: 200px" class="img rounded-circle" alt="profile">
+                    <img src="<?php echo isset($user['profileImage']) ? $user['profileImage'] : '../image/profile/beard.png' ; ?>" style="width: 200px; height: 200px" class="img rounded-circle" alt="profile">
                 </div>
             </div>
             <div class="d-flex justify-content-center">
