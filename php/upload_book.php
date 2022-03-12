@@ -80,42 +80,43 @@ $con=mysqli_connect($server,$user,$pass,$db);
     background-color:black;
     color: whitesmoke;">
     <form method="post" action="" enctype="multipart/form-data">
-        <div class="form-group">
+        <div class="form-group labell" style="margin-left:190px;margin-bottom:5px;" >
             <label for="inputName">Id</label>
-                <input type="number" class="form-control" id="inputName" name="id">
+                <input type="number" class="form-control allign" style="height:31px; width:300px;" id="inputName" name="id">
         </div>
         <div class="form-row">
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-6 labell" style="margin-left:168px;margin-bottom:5px;" >
                 <label for="inputArtist">ISBN</label>
-                <input type="text" class="form-control" id="inputArtist" name="isbn">
+                <input type="text" class="form-control allign" style="height:31px; width:300px;" id="inputArtist" name="isbn">
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-6" style="margin-left:125px;margin-bottom:5px;">
                 <label for="inputYear">Book Name</label>
-                <input type="text" class="form-control" id="inputYear" name="name">
+                <input type="text" class="form-control" style="height:31px; width:300px;"  id="inputYear" name="name">
             </div>
         </div>
         <div class="form-row">
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-6" style="margin-left:153px;margin-bottom:5px;">
                 <label for="inputPrice">Writer</label>
-                <input type="text" class="form-control" id="inputPrice" name="writer">
+                <input type="text" class="form-control" style="height:31px; width:300px;" id="inputPrice" name="writer">
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-6" style="margin-left:138px;margin-bottom:5px;">
                 <label for="inputNumber">Category</label>
-                <input type="text" class="form-control" id="inputNumber" name="category" min="1" max="50">
+                <input type="text" class="form-control" style="height:31px; width:300px;" id="inputNumber" name="category" min="1" max="50">
             </div>
         </div>
-        <label for="custome-file">Upload Book</label>
-        <div class="custom-file">
+        
+        <label for="custome-file"><h4 style="margin-left:125px;margin-bottom:5px;">Upload Book</h4></label>
+        <div class="custom-file" style="margin-left:138px;margin-bottom:5px;">
     <input type="file" class="custom-file-input" id="customFile" name="image">
-    <label class="custom-file-label" for="customFile">Choose file</label>
-    <div class="form-group col-md-6">
+    <label class="custom-file-label" style="height:31px; width:300px;" for="customFile">Choose file</label>
+    <div class="form-group col-md-6" style="margin-left:153px;margin-bottom:5px;">
                 <label for="inputNumber">Count</label>
-                <input type="number" class="form-control" id="inputNumber" name="count" min="1" max="50">
+                <input type="number" class="form-control" style="height:31px; width:300px;"  id="inputNumber" name="count" min="1" max="50">
             </div>
         </div>
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-6" style="margin-left:153px;margin-bottom:5px;">
                 <label for="inputNumber">Link</label>
-                <input type="varchar" class="form-control" id="inputNumber" name="link" min="1" max="50">
+                <input type="varchar" class="form-control"  style="height:31px; width:300px;"  id="inputNumber" name="link" min="1" max="50">
             </div>
   </div>
         <button type="submit" class="btn btn-danger mt-2 buton" style=" margin-left: 45%; margin-top:0px;
