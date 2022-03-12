@@ -14,7 +14,7 @@ body {
   
      background-image:linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url('../image/old-library-1.jpg');
  }
-}
+
 
 header { background-image:linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url('../image/old-library-1.jpg');
     background-size: cover;
