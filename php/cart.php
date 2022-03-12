@@ -200,7 +200,7 @@ return $filter_Result;
 
     </div>
     <div class="b2">
-      <a href=""> <data-toggle="tooltip" data-placement="top" title="Proceed">Proceed to pay <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+      <a href=""> <data-toggle="tooltip" data-placement="top" title="Proceed">Proceed to Continue<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 
       </div>
 

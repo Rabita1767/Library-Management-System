@@ -26,10 +26,12 @@
             <div class="menu">
                 <ul class="l1">
                     <li class="r1">
-                        <a href="">Category</a></li>
+                        
                         <li><a href="../index.html">Home</a></li>
-                        <li><a href="aboutdemo.php">Services</a></li>
-                       <li> <a href="book.php">Book</a></li>
+                        <li><a href="../template/about.html">ABOUT US</a></li>
+                        <li><a href="../template/services.html">Services</a></li>
+                        
+                      
                        
                        <li class="reg-btn"> <a href="cart.php">Cart</a></li>
                        

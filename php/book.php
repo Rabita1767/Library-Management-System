@@ -119,7 +119,7 @@ return $filter_Result;
        <div class="col-md-6">
          <div class="navbar">
          <div class="logo">
-                <a href="indexnew.php">Online<span> Library</span></a>
+                <a href="">Online<span> Library</span></a>
             </div>
          </div>
 
@@ -160,6 +160,7 @@ return $filter_Result;
                 </ul>
                 
             </div>
+            
             <div class="row">
               <div class="col-md-3">
               <div class="table-responsive">
@@ -251,6 +252,7 @@ return $filter_Result;
 
 
    </section>
+            
     
    <section id="footer">
   

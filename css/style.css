@@ -144,16 +144,16 @@ h3 {
 }
 
 .btn-sign {
-    background-color: rgba(255, 99, 71, .1);
-    ;
-    color: rgb(209, 108, 108);
+    background-color: rgb(209, 108, 108);
+    
+    color: white;
     margin-right: 15px;
     border: 1px solid rgb(209, 108, 108);
     font-size: 100%;
 }
 
 .btn-sign:hover {
-    background-color: whitesmoke;
+    background-color: rosybrown;
 }
 
 .btn-show {
@@ -175,10 +175,10 @@ h3 {
 
 @keyframes colorEva {
     0% {
-        color: yellow;
+        color: tomato;
     }
     25% {
-        color: tomato;
+        color: rosybrown;
     }
     50% {
         color: violet;
