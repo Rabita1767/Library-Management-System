@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Flamenco&display=swap');
+
+:root{
+    /*--font-ubuntu: 'Ubuntu', monospace;*/
+    --font-flamenco: 'Flamenco', cursive;
+    color: wheat;
+    --color-border: rgb(209, 108, 108);
+}
+
+.font-flamenco{
+    font: normal 500 16px var(--font-flamenco);
+}
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url('../image/old-library-1.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 130vh;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.clearfix:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0px;
+    clear: both;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, .4);
+    ;
+}
+
+.row {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.left {
+    width: 25%;
+    float: left;
+}
+
+.right {
+    width: 75%;
+    float: right;
+    margin-left: auto;
+    margin-right: 0%;
+    padding-left: 0%;
+}
+
+h4 {
+    font-size: 300%;
+    float: left;
+    color: whitesmoke;
+    transform: translate(-50%, 0%);
+}
+
+.logo {
+    width: auto;
+    height: 100px;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav {
+    float: right;
+    margin-top: 70px;
+    font-weight: bold;
+}
+
+.main-nav li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 25px;
+    transform: translate(50%, 0%);
+}
+
+.main-nav li a {
+    padding: 3px 0;
+    color: whitesmoke;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 120%;
+    font-weight: lighter;
+}
+
+.main-nav li a img{
+    height: 10%;
+    width: 10%;
+    
+
+}
+
+.main-nav li a:hover {
+    border-bottom: 2px solid rgb(209, 108, 108);
+    color: rgb(209, 108, 108);
+}
+
+.main {
+    width: 1180px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.first {
+    margin-bottom: 30px;
+    font-size: 60%;
+    letter-spacing: 3px;
+    font-weight: lighter;
+}
+
+
+
+
+.change1 {
+    animation: colorEva 2s infinite;
+}
+
+@keyframes colorEva {
+    0% {
+        color: tomato;
+    }
+    25% {
+        color: rosybrown;
+    }
+    50% {
+        color: violet;
+    }
+    100% {
+        color: rgb(209, 108, 108);
+    }
+}
+
+@media only screen and (max-width: 1180px) {
+    .main {
+        width: 100%;
+        padding: 0 2%;
+    }
+    h4 {
+        width: 100%;
+        padding: 0 4%;
+    }
+}
+
+@media only screen and (max-width: 998px) {
+    h1 {
+        font-size: 200%;
+    }
+    h3 {
+        font-size: 120%;
+    }
+    h4 {
+        font-size: 270%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 180%;
+    }
+    h3 {
+        font-size: 100%;
+    }
+    h4 {
+        font-size: 240%;
+    }
+    .main-nav {
+        display: none;
+    }
+}
+
+
+
+h1{
+    color: rgb(209, 108, 108);
+}
+p,span{
+    color: white;
+}
+
+.nav-link b {
+    color: wheat;
+}
+.nav-link span{
+    color: wheat;
+    font-size: 700;
+}
+.container{
+    background: linear-gradient(rgba(90, 63, 63, 0.6), rgba(49, 47, 47, 0.8));
+}
+
+
+textarea {
+    margin: 2%;
+    border: 2px solid white;
+    background: black;
+    color: white;
+}
+.btn{
+    background-color: rgb(209, 108, 108);
+    border: 2px solid wheat;
+    margin: 2%;
+    color: black;
+    
+}
+.form-control{
+    color: bisque;
+}
+
+#login-form{
+    padding: 10% 0;
+}
+
+#register .upload-profile-image{
+    position: relative;
+    width: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: filter .8s ease;
+}
+
+#register .upload-profile-image:hover{
+    filter: drop-shadow(1px 1px 22px #7584bb);
+}
+
+#upload-profile{
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 100px;
+    margin-top: 0px;
+    opacity: .1;
+}
+
+#upload-profile::-webkit-file-upload-button{
+    visibility:visible;
+}
+
+#upload-profile::before{
+    content: '';
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#register .upload-profile-image .camera-icon{
+    position: absolute;
+    top: 70px;
+    width: 60px !important;
+    filter: invert(30%) !important;
+}
+
+#register .upload-profile-image:hover .camera-icon{
+    filter: invert(100%) !important;
+}
+
+#reg-form input[type='text'],
+#reg-form input[type='email'],
+#reg-form input[type='password'],
+#log-form input[type='text'],
+#log-form input[type='email'],
+#log-form input[type='password']{
+    border: none;
+    border-radius: 5%;
+    color: antiquewhite;
+    background: transparent;
+    border-bottom: 1px solid var(--color-border);
+    font-family: var(--font-flamenco);
+}
+
+#reg-form input[type='text'],
+#reg-form input[type='email'],
+#reg-form input[type='password'],
+#log-form input[type='text'],
+#log-form input[type='email'],
+#log-form input[type='password']{
+    outline: none;
+    box-shadow: none;
+}

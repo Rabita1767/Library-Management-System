@@ -9,7 +9,7 @@ $con=mysqli_connect($server,$user,$pass,$db);
 
     if($con){
         if(isset($_POST['upload'])){
-            $id=$_POST['id'];
+            // $id=$_POST['id'];
             $isbn=$_POST['isbn'];
             $name=$_POST['name'];
             $writer=$_POST['writer'];
@@ -23,10 +23,10 @@ $con=mysqli_connect($server,$user,$pass,$db);
                 echo '<script>alert("This book is already uploaded.")</script>';
             }
             else{
-                $input="INSERT INTO book1(id,isbn,name,writer,category,`image`,`count`) 
-                VALUES('$id','$isbn','$name','$writer','$category','$image','$count')";
-                $result= mysqli_query($con, $input);
-                echo $result;
+                $sql="INSERT INTO book1(isbn,name,writer,category,`image`,`count`,`link`) 
+                VALUES('$isbn','$name','$writer','$category','$image','$count','a')";
+                
+                $result= mysqli_query($con, $sql);
                 if($result){
                     move_uploaded_file($_FILES['image']['tmp_name'], $target);
                    // echo "added";

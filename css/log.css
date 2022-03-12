@@ -11,17 +11,14 @@
     font: normal 500 16px var(--font-flamenco);
 }
 
-#register, #login-form{
+#register, #login-form, .ind{
     padding: 5% 0;
     background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .9)), url('../image/old-library-1.jpg');
-    background-size: cover;
     width: 100%;
     height: 130vh;
     background-repeat: no-repeat;   
 }
-.ind{
-    background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .9)), url('../image/old-library-1.jpg') no-repeat ;
-}
+
 h1{
     color: rgb(209, 108, 108);
 }
@@ -29,16 +26,14 @@ p,span{
     color: white;
 }
 .nav-link span{
-    color: rgb(197, 34, 34);
+    color: rgb(78, 73, 73);
 }
-.ind .container{
-    background-color: plum;
-}
+
 
 textarea {
     margin: 2%;
     border: 2px solid white;
-    background: transparent;
+    background: black;
     color: white;
 }
 .btn{
