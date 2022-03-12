@@ -48,7 +48,7 @@ $con=mysqli_connect($server,$user,$pass,$db);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art Gallary</title>
+    <title>book</title>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/animate.css">
@@ -56,7 +56,7 @@ $con=mysqli_connect($server,$user,$pass,$db);
 <body style="background-image: url(../image/old-library-1.jpg); background-size: cover; width: 100vw; height: auto;">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand logo" href="#">Art Gallary</a>
+            <a class="navbar-brand logo" href="#"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -84,7 +84,7 @@ $con=mysqli_connect($server,$user,$pass,$db);
             <label for="inputName">Id</label>
                 <input type="number" class="form-control allign" style="height:31px; width:300px;" id="inputName" name="id">
         </div>
-        <div class="form-row">
+        <!-- <div class="form-row"> -->
             <div class="form-group col-md-6 labell" style="margin-left:168px;margin-bottom:5px;" >
                 <label for="inputArtist">ISBN</label>
                 <input type="text" class="form-control allign" style="height:31px; width:300px;" id="inputArtist" name="isbn">
@@ -93,8 +93,8 @@ $con=mysqli_connect($server,$user,$pass,$db);
                 <label for="inputYear">Book Name</label>
                 <input type="text" class="form-control" style="height:31px; width:300px;"  id="inputYear" name="name">
             </div>
-        </div>
-        <div class="form-row">
+        <!-- </div> -->
+        <!-- <div class="form-row"> -->
             <div class="form-group col-md-6" style="margin-left:153px;margin-bottom:5px;">
                 <label for="inputPrice">Writer</label>
                 <input type="text" class="form-control" style="height:31px; width:300px;" id="inputPrice" name="writer">
@@ -103,23 +103,24 @@ $con=mysqli_connect($server,$user,$pass,$db);
                 <label for="inputNumber">Category</label>
                 <input type="text" class="form-control" style="height:31px; width:300px;" id="inputNumber" name="category" min="1" max="50">
             </div>
-        </div>
-        
-        <label for="custome-file"><h4 style="margin-left:125px;margin-bottom:5px;">Upload Book</h4></label>
-        <div class="custom-file" style="margin-left:138px;margin-bottom:5px;">
+        <!-- </div> -->
+        <div>
+        <label for="custome-file"><h4 style="margin-left:110px;margin-bottom:5px;">Upload Book</h4></label>
+        <div class="custom-file" style="margin-left:208px;margin-bottom:5px;">
     <input type="file" class="custom-file-input" id="customFile" name="image">
     <label class="custom-file-label" style="height:31px; width:300px;" for="customFile">Choose file</label>
-    <div class="form-group col-md-6" style="margin-left:153px;margin-bottom:5px;">
+</div>
+    <div class="form-group col-md-6" style="margin-left:160px;margin-bottom:5px;">
                 <label for="inputNumber">Count</label>
                 <input type="number" class="form-control" style="height:31px; width:300px;"  id="inputNumber" name="count" min="1" max="50">
             </div>
-        </div>
-        <div class="form-group col-md-6" style="margin-left:153px;margin-bottom:5px;">
+        <!-- </div> -->
+        <div class="form-group col-md-6" style="margin-left:173px;margin-bottom:5px;">
                 <label for="inputNumber">Link</label>
                 <input type="varchar" class="form-control"  style="height:31px; width:300px;"  id="inputNumber" name="link" min="1" max="50">
             </div>
   </div>
-        <button type="submit" class="btn btn-danger mt-2 buton" style=" margin-left: 45%; margin-top:0px;
+        <button type="submit" class="btn btn-danger mt-2 buton" style=" margin-left: 38%; margin-top:0px;
     width: 10vw; height:40px;"name="upload">Upload</button> 
             
         <!-- <a class="btn btn-info" href="customer_query.html" role="button">Log in</a> -->
