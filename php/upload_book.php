@@ -15,7 +15,7 @@ $con=mysqli_connect($server,$user,$pass,$db);
             $writer=$_POST['writer'];
             $category=$_POST['category'];
             $image= time().'_'.$_FILES['image']['name'];
-            $target='../book_image/'.$image;
+            $target='../image/'.$image;
             $count=$_POST['count'];
             $sqlFind="Select * from book1 where id='$id'";
             $resultFind=mysqli_query($con,$sqlFind);
@@ -29,9 +29,9 @@ $con=mysqli_connect($server,$user,$pass,$db);
                 echo $result;
                 if($result){
                     move_uploaded_file($_FILES['image']['tmp_name'], $target);
-                    echo "added";
+                   // echo "added";
                     //$_SESSION['Email']=$Email;
-                    // header('location:book.php');
+                    header('location:book.php');
                 }else{
                     echo "not added";
                     // echo '<script>alert("Please enter your information once again.")</script>';
