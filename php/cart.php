@@ -196,11 +196,11 @@ return $filter_Result;
             }
             ?>
 
-        </table>
+      </table>
 
     </div>
     <div class="b2">
-      <a href=""> <data-toggle="tooltip" data-placement="top" title="Proceed">Proceed to Continue<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+      <a href="pdf_generator.php"> <data-toggle="tooltip" data-placement="top" title="Proceed">Proceed to Continue<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 
       </div>
 

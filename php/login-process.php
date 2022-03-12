@@ -1,5 +1,4 @@
 <?php
-
 $error = array();
 
 $email = validate_input_email($_POST['email']);
@@ -17,6 +16,7 @@ if(empty($error)){
     $query = "SELECT userID, firstName, lastName, email, password, profileImage FROM user WHERE email=?";
     $q = mysqli_stmt_init($con);
     mysqli_stmt_prepare($q, $query);
+
 
     // bind parameter
     mysqli_stmt_bind_param($q, 's', $email);
