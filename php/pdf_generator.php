@@ -4,6 +4,9 @@ require('../vendor/autoload.php');
 $con=mysqli_connect('localhost','root','','webtech');
 
 //$res=mysqli_query($con,"select * from book1");
+
+$name=$_SESSION["email"];
+$item_array_id= array_column($_SESSION["shopping_cart"],"item_id");
 if(!empty($_SESSION["shopping_cart"]))
 {
     foreach($_SESSION['shopping_cart'] as $keys => $values)
@@ -43,7 +46,7 @@ if(!empty($_SESSION["shopping_cart"]))
             <h4>Jahangirnagar University</h4>
             <h1>Claim Receipt</h1>
         </div>
-        <p>Issue Date:</p>
+        
         <p>Validity: 2 weeks</p>
         <p>Expiry Date:</p>
         <table class="table">';
@@ -60,9 +63,9 @@ if(!empty($_SESSION["shopping_cart"]))
         }
         </style>
         <div>
-            <h4>Student Name: </h4>
+            <h4>Student Email: '.$name.' </h4>
             
-            <h4>Student Email:</h4>        
+                    
             
         </div>
         <div class="pdf_footer">
