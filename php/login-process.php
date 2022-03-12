@@ -32,6 +32,8 @@ if(empty($error)){
         // verify password
         if(password_verify($password, $row['password'])){
             $_SESSION['email']=$email;
+            $_SESSION['firstName']=$firstName;
+            $_SESSION['lastName']=$lastName;
             header("location:welcome.php ");
             exit();
         }
