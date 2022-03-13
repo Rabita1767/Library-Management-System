@@ -54,28 +54,29 @@ $con=mysqli_connect($server,$user,$pass,$db);
     <link rel="stylesheet" href="../css/animate.css">
     <link rel="stylesheet" href="../css/upload_book.css">
 <body style="background-image: url(../image/old-library-1.jpg); background-size: cover; width: 100vw; height: auto;">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand logo" href="#"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active bg-info" style="margin: 5px">
-                        <a class="nav-link text-light" href="index.php">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item bg-info" style="margin: 5px">
-                        <a class="nav-link text-light" href="admin_login.php">Admin Login</a>
-                    </li>
-                    <li class="nav-item bg-info" style="margin: 5px">
-                        <a class="nav-link text-light" href="customer_login.php">Customer - Login/Sign up</a>
-                    </li>
-                </ul>
+<nav>
+            <div class="row clearfix">
+                <div class="left">
+                    <h4 class="change1">Online Library</h4>
+                </div>
+                <div class="right">
+                    <ul class="main-nav ">
+
+                      
+
+                        <li><a href="../index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                        
+
+                        <li><a href="#">SERVICES</a></li>
+                        <li><a href="../php/book.php">BOOKS</a></li>
+                        <li><a href="../php/feedback.php">FEEDBACK</a></li>
+                        <li><a href="contact.html">CONTACT US</a></li>
+                        
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
     <div class="container signup text-danger" style="margin-left: 50%; width: 50vw; height: auto; margin: 16vh auto; padding: 4vh;
     background-color:black;
     color: whitesmoke;">
