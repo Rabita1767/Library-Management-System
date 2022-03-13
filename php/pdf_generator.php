@@ -6,7 +6,7 @@ $con=mysqli_connect('localhost','root','','webtech');
 //$res=mysqli_query($con,"select * from book1");
 
 $name=$_SESSION["email"];
-$item_array_id= array_column($_SESSION["shopping_cart"],"item_id");
+
 if(!empty($_SESSION["shopping_cart"]))
 {
     foreach($_SESSION['shopping_cart'] as $keys => $values)

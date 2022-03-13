@@ -53,16 +53,13 @@ if(empty($error)){
     // execute statement
     mysqli_stmt_execute($q);
 
-    if(mysqli_stmt_affected_rows($q) > 1){
+    if(mysqli_stmt_affected_rows($q)== 1){
 
         // start a new session
         session_start();
 
         // create session variable
         $_SESSION['userID'] = mysqli_insert_id($con);
-      $_SESSION['firstName']=$firstName;
-      $_SESSION['firstName']=$firstName;
-
         header('location: login.php');
         exit();
     }else{
