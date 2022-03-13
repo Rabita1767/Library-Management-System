@@ -53,7 +53,238 @@ $con=mysqli_connect($server,$user,$pass,$db);
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/animate.css">
     <link rel="stylesheet" href="../css/upload_book.css">
+    <style>
+ * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 20px;
+    overflow-x: hidden;
+    color: wheat;
+    font-family: 'Flamenco', cursive;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url('../image/old-library-1.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 130vh;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.clearfix:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0px;
+    clear: both;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, .4);
+    ;
+}
+
+.row {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.left {
+    width: 25%;
+    float: left;
+}
+
+.right {
+    width: 75%;
+    float: right;
+    margin-left: auto;
+    margin-right: 0%;
+    padding-left: 0%;
+}
+
+h4 {
+    font-size: 300%;
+    float: left;
+    color: whitesmoke;
+    transform: translate(-50%, 0%);
+}
+
+.logo {
+    
+    height: 100px;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav {
+    float: right;
+    margin-top: 70px;
+    font-weight: bold;
+}
+
+.main-nav li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 20px;
+    transform: translate(50%, 0%);
+}
+
+.main-nav li a {
+    padding: 3px 0;
+    color: whitesmoke;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 120%;
+    font-weight: lighter;
+}
+
+.main-nav li a img{
+    height: 10%;
+    width: 10%;
+    
+
+}
+
+.main-nav li a:hover {
+    border-bottom: 2px solid rgb(209, 108, 108);
+    color: rgb(209, 108, 108);
+}
+
+.main {
+    width: 1180px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.first {
+    margin-bottom: 30px;
+    font-size: 60%;
+    letter-spacing: 3px;
+    font-weight: lighter;
+}
+
+h1 {
+    color: whitesmoke;
+    font-size: 240%;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+    margin: 20px 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h3 {
+    margin: 10px 0px;
+    color: whitesmoke;
+    font-weight: lighter;
+    font-size: 150%;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 200px;
+    transition: background-color .2s, border .2s, color .2;
+}
+
+.btn-sign {
+    background-color: rgb(209, 108, 108);
+    
+    color: white;
+    margin-right: 15px;
+    border: 1px solid rgb(209, 108, 108);
+    font-size: 100%;
+}
+
+.btn-sign:hover {
+    background-color: rosybrown;
+}
+
+.btn-show {
+    background-color: rgba(245, 245, 245, .2);
+    color: rgb(245, 245, 245);
+    margin-right: 15px;
+    border: 1px solid whitesmoke;
+    font-size: 100%;
+}
+
+.btn-show:hover {
+    background-color: rgb(209, 108, 108);
+    
+}
+
+.change1 {
+    animation: colorEva 2s infinite;
+}
+
+@keyframes colorEva {
+    0% {
+        color: tomato;
+    }
+    25% {
+        color: rosybrown;
+    }
+    50% {
+        color: violet;
+    }
+    100% {
+        color: rgb(209, 108, 108);
+    }
+}
+
+@media only screen and (max-width: 1180px) {
+    .main {
+        width: 100%;
+        padding: 0 2%;
+    }
+    h4 {
+        width: 100%;
+        padding: 0 4%;
+    }
+}
+
+@media only screen and (max-width: 998px) {
+    h1 {
+        font-size: 200%;
+    }
+    h3 {
+        font-size: 120%;
+    }
+    h4 {
+        font-size: 270%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 180%;
+    }
+    h3 {
+        font-size: 100%;
+    }
+    h4 {
+        font-size: 240%;
+    }
+    .main-nav {
+        display: none;
+    }
+}
+</style>
+</head>
 <body style="background-image: url(../image/old-library-1.jpg); background-size: cover; width: 100vw; height: auto;">
+<header>
 <nav>
             <div class="row clearfix">
                 <div class="left">
@@ -68,7 +299,7 @@ $con=mysqli_connect($server,$user,$pass,$db);
                         <li><a href="about.html">ABOUT US</a></li>
                         
 
-                        <li><a href="#">SERVICES</a></li>
+                        <li><a href="../template/services.html">SERVICES</a></li>
                         <li><a href="../php/book.php">BOOKS</a></li>
                         <li><a href="../php/feedback.php">FEEDBACK</a></li>
                         <li><a href="contact.html">CONTACT US</a></li>
@@ -83,45 +314,45 @@ $con=mysqli_connect($server,$user,$pass,$db);
     <form method="post" action="" enctype="multipart/form-data">
         <div class="form-group labell" style="margin-left:190px;margin-bottom:5px;" >
             <label for="inputName">Id</label>
-                <input type="number" class="form-control allign" style="height:31px; width:300px;" id="inputName" name="id">
+                <input type="number" class="form-control allign" style="height:31px; width:300px;background:transparent;border:solid 2px white;" id="inputName" name="id">
         </div>
         <!-- <div class="form-row"> -->
-            <div class="form-group col-md-6 labell" style="margin-left:168px;margin-bottom:5px;" >
+            <div class="form-group col-md-6 labell" style="margin-left:162px;margin-bottom:5px;" >
                 <label for="inputArtist">ISBN</label>
-                <input type="text" class="form-control allign" style="height:31px; width:300px;" id="inputArtist" name="isbn">
+                <input type="text" class="form-control allign" style="height:31px; width:300px;background:transparent;border:solid 2px white" id="inputArtist" name="isbn">
             </div>
-            <div class="form-group col-md-6" style="margin-left:125px;margin-bottom:5px;">
+            <div class="form-group col-md-6" style="margin-left:110px;margin-bottom:5px;">
                 <label for="inputYear">Book Name</label>
-                <input type="text" class="form-control" style="height:31px; width:300px;"  id="inputYear" name="name">
+                <input type="text" class="form-control" style="height:31px; width:300px;background:transparent;border:solid 2px white"  id="inputYear" name="name">
             </div>
         <!-- </div> -->
         <!-- <div class="form-row"> -->
-            <div class="form-group col-md-6" style="margin-left:153px;margin-bottom:5px;">
+            <div class="form-group col-md-6" style="margin-left:145px;margin-bottom:5px;">
                 <label for="inputPrice">Writer</label>
-                <input type="text" class="form-control" style="height:31px; width:300px;" id="inputPrice" name="writer">
+                <input type="text" class="form-control" style="height:31px; width:300px;background:transparent;border:solid 2px white" id="inputPrice" name="writer">
             </div>
-            <div class="form-group col-md-6" style="margin-left:138px;margin-bottom:5px;">
+            <div class="form-group col-md-6" style="margin-left:128px;margin-bottom:5px;">
                 <label for="inputNumber">Category</label>
-                <input type="text" class="form-control" style="height:31px; width:300px;" id="inputNumber" name="category" min="1" max="50">
+                <input type="text" class="form-control" style="height:31px; width:300px;background:transparent;border:solid 2px white" id="inputNumber" name="category" min="1" max="50">
             </div>
         <!-- </div> -->
         <div>
-        <label for="custome-file"><h4 style="margin-left:110px;margin-bottom:5px;">Upload Book</h4></label>
-        <div class="custom-file" style="margin-left:208px;margin-bottom:5px;">
-    <input type="file" class="custom-file-input" id="customFile" name="image">
-    <label class="custom-file-label" style="height:31px; width:300px;" for="customFile">Choose file</label>
+        <label for="custome-file"><h5 style="margin-left:110px;margin-bottom:5px;">Upload Book</h5></label>
+        <div class="custom-file" style="margin-left:218px;margin-bottom:5px;">
+    <input type="file" class="custom-file-input" style="margin-right:0px;"id="customFile" name="image">
+    <label class="custom-file-label" style="height:31px; width:300px;background:transparent;border:solid 2px white" for="customFile">Choose file</label>
 </div>
-    <div class="form-group col-md-6" style="margin-left:160px;margin-bottom:5px;">
+    <div class="form-group col-md-6" style="margin-left:155px;margin-bottom:5px;">
                 <label for="inputNumber">Count</label>
-                <input type="number" class="form-control" style="height:31px; width:300px;"  id="inputNumber" name="count" min="1" max="50">
+                <input type="number" class="form-control" style="height:31px; width:300px;background:transparent;border:solid 2px white"  id="inputNumber" name="count" min="1" max="50">
             </div>
         <!-- </div> -->
         <div class="form-group col-md-6" style="margin-left:173px;margin-bottom:5px;">
                 <label for="inputNumber">Link</label>
-                <input type="varchar" class="form-control"  style="height:31px; width:300px;"  id="inputNumber" name="link" min="1" max="50">
+                <input type="varchar" class="form-control"  style="height:31px; width:300px;background:transparent;border:solid 2px white"  id="inputNumber" name="link" min="1" max="50">
             </div>
   </div>
-        <button type="submit" class="btn btn-danger mt-2 buton" style=" margin-left: 38%; margin-top:0px;
+        <button type="submit" class="btn btn-danger mt-2 buton" style=" margin-left: 35%; margin-top:0px;
     width: 10vw; height:40px;"name="upload">Upload</button> 
             
         <!-- <a class="btn btn-info" href="customer_query.html" role="button">Log in</a> -->
@@ -144,5 +375,5 @@ $(".custom-file-input").on("change", function() {
     </script>
     <script src="../js/main.js"></script>
 </body>
-
+</header>
 </html>
