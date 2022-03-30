@@ -1,121 +1,156 @@
-@import url('https://fonts.googleapis.com/css2?family=Flamenco&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-:root{
-    /*--font-ubuntu: 'Ubuntu', monospace;*/
-    --font-flamenco: 'Flamenco', cursive;
-    color: wheat;
-    --color-border: rgb(209, 108, 108);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-.font-flamenco{
-    font: normal 500 16px var(--font-flamenco);
-}
-
-#register, #login-form, .ind{
-    padding: 5% 0;
-    background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .9)), url('../image/old-library-1.jpg');
+body {
     width: 100%;
-    height: 130vh;
-    background-repeat: no-repeat;   
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(bg.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-h1{
-    color: rgb(209, 108, 108);
-}
-p,span{
-    color: white;
-}
-.nav-link span{
-    color: rgb(78, 73, 73);
-}
-
-
-textarea {
-    margin: 2%;
-    border: 2px solid white;
-    background: black;
-    color: white;
-}
-.btn{
-    background-color: rgb(209, 108, 108);
-    border: 2px solid wheat;
-    margin: 2%;
-    color: black;
-    
-}
-.form-control{
-    color: bisque;
+.container {
+    width: 400px;
+    min-height: 400px;
+    background: #FFF;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    padding: 40px 30px;
 }
 
-#login-form{
-    padding: 10% 0;
+.container .login-text {
+    color: #111;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 20px;
+    display: block;
+    text-transform: capitalize;
 }
 
-#register .upload-profile-image{
-    position: relative;
-    width: 5%;
-    margin-left: auto;
-    margin-right: auto;
-    transition: filter .8s ease;
+.container .login-social {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    margin-bottom: 25px;
 }
 
-#register .upload-profile-image:hover{
-    filter: drop-shadow(1px 1px 22px #7584bb);
+.container .login-social a {
+    padding: 12px;
+    margin: 10px;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    text-decoration: none;
+    font-size: 1rem;
+    text-align: center;
+    color: #FFF;
+    transition: .3s;
 }
 
-#upload-profile{
-    position: absolute;
-    top: 0;
-    z-index: 10;
-    width: 100px;
-    margin-top: 0px;
-    opacity: .1;
+.container .login-social a i {
+    margin-right: 5px;
 }
 
-#upload-profile::-webkit-file-upload-button{
-    visibility:visible;
+.container .login-social a.facebook {
+    background: #4267B2;
 }
 
-#upload-profile::before{
-    content: '';
-    display: inline-block;
-    width: 200px;
-    height: 200px;
-    cursor: pointer;
-    border-radius: 50%;
+.container .login-social a.twitter {
+    background: #1DA1F2;
 }
 
-#register .upload-profile-image .camera-icon{
-    position: absolute;
-    top: 70px;
-    width: 60px !important;
-    filter: invert(30%) !important;
+.container .login-social a.google-plus {
+    background: #db4a39;
 }
 
-#register .upload-profile-image:hover .camera-icon{
-    filter: invert(100%) !important;
+.container .login-social a.linkedin {
+    background: #0e76a8;
 }
 
-#reg-form input[type='text'],
-#reg-form input[type='email'],
-#reg-form input[type='password'],
-#log-form input[type='text'],
-#log-form input[type='email'],
-#log-form input[type='password']{
-    border: none;
-    border-radius: 5%;
-    color: antiquewhite;
+.container .login-social a.facebook:hover {
+    background: #3d5fa3;
+}
+
+.container .login-social a.twitter:hover {
+    background: #1991db;
+}
+
+.container .login-social a.google-plus:hover {
+    background: #ca4334;
+}
+
+.container .login-social a.linkedin:hover {
+    background: #0b5c81;
+}
+
+.container .login-email .input-group {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 25px;
+}
+
+.container .login-email .input-group input {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #e7e7e7;
+    padding: 15px 20px;
+    font-size: 1rem;
+    border-radius: 30px;
     background: transparent;
-    border-bottom: 1px solid var(--color-border);
-    font-family: var(--font-flamenco);
+    outline: none;
+    transition: .3s;
 }
 
-#reg-form input[type='text'],
-#reg-form input[type='email'],
-#reg-form input[type='password'],
-#log-form input[type='text'],
-#log-form input[type='email'],
-#log-form input[type='password']{
+.container .login-email .input-group input:focus, .container .login-email .input-group input:valid {
+    border-color: #a29bfe;
+}
+
+.container .login-email .input-group .btn {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    text-align: center;
+    border: none;
+    background: #a29bfe;
     outline: none;
-    box-shadow: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    color: #FFF;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.container .login-email .input-group .btn:hover {
+    transform: translateY(-5px);
+    background: #6c5ce7;
+}
+
+.login-register-text {
+    color: #111;
+    font-weight: 600;
+}
+
+.login-register-text a {
+    text-decoration: none;
+    color: #6c5ce7;
+}
+
+@media (max-width: 430px) {
+    .container {
+        width: 300px;
+    }
+    .container .login-social {
+        display: block;
+    }
+    .container .login-social a {
+        display: block;
+    }
 }

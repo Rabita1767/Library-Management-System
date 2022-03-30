@@ -36,7 +36,7 @@ session_start();
                         <li><a href="../php/book.php">BOOKS</a></li>
                         <li><a href="../php/feedback.php">FEEDBACK</a></li>
                         <li><a href="contact.html">CONTACT US</a></li>
-                        <li> <a href=""><?php echo $_SESSION["email"];?></a></li>
+                        <li> <a href=""><?php echo  $_SESSION["user_name"];?></a></li>
                         <li><a href="../php/indexlog.php"><img src="../image/log.png" alt=""></a></li>
                     </ul>
                 </div>
@@ -50,7 +50,7 @@ session_start();
             </h1>
             <h3>House of thoughts and knowledge.</h3>
             <a href="../php/logout.php" class="btn btn-sign">Log out</a>
-            <a href="#" class="btn btn-show">Show more..</a>
+            <!-- <a href="#" class="btn btn-show">Show more..</a> -->
         </div>
     </header>
 </body>
