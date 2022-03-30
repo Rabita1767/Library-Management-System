@@ -22,7 +22,7 @@
                 <div class="upload-profile-image d-flex justify-content-center pb-5">
                     <div class="text-center">
                         <div class="d-flex justify-content-center">
-                            <img class="camera-icon" src="../image/camera-solid.svg" alt="camera">
+                           <!-- <img class="camera-icon" src="../image/camera-solid.svg" alt="camera">-->
                         </div>
                         <img src="../image/profile/beard.png" style="width: 200px; height: 200px" class="img rounded-circle" alt="profile">
                         

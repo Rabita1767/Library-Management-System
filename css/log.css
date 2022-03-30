@@ -57,6 +57,7 @@ textarea {
     margin-left: auto;
     margin-right: auto;
     transition: filter .8s ease;
+    visibility: hidden;
 }
 
 #register .upload-profile-image:hover{
@@ -70,10 +71,11 @@ textarea {
     width: 100px;
     margin-top: 0px;
     opacity: .1;
+    visibility: hidden;
 }
 
 #upload-profile::-webkit-file-upload-button{
-    visibility:visible;
+    visibility:hidden;
 }
 
 #upload-profile::before{

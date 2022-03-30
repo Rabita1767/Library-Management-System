@@ -46,7 +46,7 @@ session_start();
             </h1>
             <h3>House of thoughts and knowledge.</h3>
             <a href="logout.php" class="btn btn-sign">Log Out</a>
-            <a href="#" class="btn btn-show">Show more..</a>
+            
         </div>
     </header>
 </body>
