@@ -32,9 +32,9 @@ include "helper.php";
                 <span class="font-flamenco"> Haven't account? Create a new <a href="register.php">account</a></span>
             </div>
             <div class="upload-profile-image d-flex justify-content-center pb-5">
-                <div class="text-center">
+                <!--<div class="text-center">
                     <img src="<?php echo isset($user['profileImage']) ? $user['profileImage'] : '../image/profile/beard.png' ; ?>" style="width: 200px; height: 200px" class="img rounded-circle" alt="profile">
-                </div>
+                </div>-->
             </div>
             <div class="d-flex justify-content-center">
                 <form action="login.php" method="post" enctype="multipart/form-data" id="log-form">

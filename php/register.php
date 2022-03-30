@@ -19,7 +19,7 @@
                     <p class="p-1 m-0 font-flamenco ">Register with your information</p>
                     <span class="font-flamenco ">Already have ?<a href="login.php">Login</a></span>
                 </div>
-                <div class="upload-profile-image d-flex justify-content-center pb-5">
+                <!--<div class="upload-profile-image d-flex justify-content-center pb-5">
                     <div class="text-center">
                         <div class="d-flex justify-content-center">
                             <img class="camera-icon" src="../image/camera-solid.svg" alt="camera">
@@ -29,7 +29,7 @@
                         <input type="file" form="reg-form" class="form-control-file" name="profileUpload" id="upload-profile">
                         <small class="form-text text-black-50">Choose Image</small>
                     </div>
-                </div>
+                </div>-->
                 <div class="d-flex justify-content-center">
                     <form action="register.php" method="post" enctype="multipart/form-data" id="reg-form">
                         <div class="form-row">
