@@ -1,69 +1,90 @@
-
 <?php
-
+include 'connection1.php';
 session_start();
-// header.php
-include ('header.php');
-include "helper.php";
+error_reporting(0);
+if(isset($_POST["signin"]))
+{
+ 
+  $email=mysqli_real_escape_string($con,$_POST["email"]);
+  
+  $password=mysqli_real_escape_string($con,md5($_POST["password"]));
+  
+  $check_email=mysqli_query($con,"SELECT * FROM user WHERE email='$email' AND password='$password'");
+ if(mysqli_num_rows($check_email)>0){
+     $row=mysqli_fetch_assoc($check_email);
+     $_SESSION["user_id"]=$row['id'];
+     $_SESSION["user_name"]=$row['full_name'];
+     $_SESSION["user_Contact_number"]=$row['Contact_number'];
+     $_SESSION["user_email"]=$row['email'];
+    
+     header("Location:welcome.php");
+
+ }
+ else{
+     ?>
+     <script>
+         alert("Login Details is incorrect");
+     </script>
+     <?php
+ }
+  
+    
+}
 ?>
 
-<?php
-    $user = array();
-    require ('mysqli_connect.php');
+
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../css/admin.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,300&family=Lato&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 register-left">
+      <img src="../image/reg.png">
+
+      </div>
+      <div class="col-md-6 register-right">
+      <h3>Login Here</h3>
+      <div class="register-form">
+        <form action="" class="login-email" method="post">
     
-    if(isset($_SESSION['userID'])){
-        $user = get_user_info($con, $_SESSION['userID']);
-    }
-    
-    if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        require ('login-process.php');
-    }
-?>
+        <div class="form-group">
+          <input type="email" placeholder="Email Address" class="form-control" name="email" autocomplete="off" required>
 
-<!-- registration area -->
-
-<section id="login-form">
-
-    <div class="row m-0">
-        <div class="col-lg-4 offset-lg-4">
-            <div class="text-center pb-5">
-                <h1 class="login-title">Student Login</h1>
-                <p class="p-1 m-0 font-flamenco "> Student Login</p>
-                <span class="font-flamenco"> Haven't account? Create a new <a href="register.php">account</a></span>
-            </div>
-            <div class="upload-profile-image d-flex justify-content-center pb-5">
-                <div class="text-center">
-                    <!--<img src="<?php echo isset($user['profileImage']) ? $user['profileImage'] : '../image/profile/beard.png' ; ?>" style="width: 200px; height: 200px" class="img rounded-circle" alt="profile">-->
-                </div>
-            </div>
-            <div class="d-flex justify-content-center">
-                <form action="login.php" method="post" enctype="multipart/form-data" id="log-form">
-
-                    <div class="form-row my-4">
-                        <div class="col text-white">
-                            <input type="email" required name="email" id="email" class="form-control " placeholder="Email*">
-                        </div>
-                    </div>
-
-                    <div class="form-row my-4">
-                        <div class="col">
-                            <input type="password" required name="password" id="password" class="form-control" placeholder="password*">
-                        </div>
-                    </div>
-
-                    <div class="submit-btn text-center my-5">
-                        <button type="submit" class="btn rounded-pill px-5">Login</button>
-                    </div>
-
-                </form>
-            </div>
         </div>
+        
+        <div class="form-group">
+          <input type="password" placeholder="Password" class="form-control" name="password"  required>
+
+        </div>
+        
+        <div class="input-group">
+  <button type="submit" name="signin" class="btn btn-primary">Login</button></div>
+
+  <p class="login-register-text">Don't have an account?<a href="register.php">Register Here</a></p>
+</form>
+<div class="alert alert-info" style="display: none;"></div>
+</form>
+
+      </div>
+      </div>
     </div>
-</section>
-<!-- #registration area -->
+  </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-
-<?php
-// footer.php
-include ('footer.php');
-?>
+</body>
+</html>

@@ -5,7 +5,8 @@ $con=mysqli_connect('localhost','root','','webtech');
 
 //$res=mysqli_query($con,"select * from book1");
 
-$name=$_SESSION["email"];
+$name=$_SESSION["user_name"];
+$email=$_SESSION["user_email"];
 
 if(!empty($_SESSION["shopping_cart"]))
 {
@@ -64,6 +65,7 @@ if(!empty($_SESSION["shopping_cart"]))
         </style>
         <div>
             <h4>Student Email: '.$name.' </h4>
+            <h4>Student Email: '.$email.' </h4>
             
                     
             
