@@ -29,11 +29,22 @@ session_start();
                       
 
                         <li><a href="../index.html">HOME</a></li>
+<<<<<<< HEAD
                         <li><a href="../php/book.php">BOOKS</a></li>
                         <li><a href="feedback.php">FEEDBACK</a></li>
                         <li> <a href="../php/indexlog.php"><?php echo  $_SESSION["user_name"];?></a></li>
                         
                        
+=======
+                        
+                        
+
+                        <li><a href="../php/book.php">BOOKS</a></li>
+                        <li><a href="../php/feedback.php">FEEDBACK</a></li>
+                       
+                        <li> <a href="../php/indexlog.php"><?php echo  $_SESSION["user_name"];?></a></li>
+                        
+>>>>>>> e67a2ef7ca4eb7a289b0bf8244eaf47826e07295
                     </ul>
                 </div>
             </div>
