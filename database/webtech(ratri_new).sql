@@ -1,412 +1,166 @@
--- phpMyAdmin SQL Dump
--- version 5.0.4
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Apr 01, 2022 at 05:54 PM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.1
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `webtech`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `admin`
---
-
-CREATE TABLE `admin` (
-  `id` int(100) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `email` varchar(200) NOT NULL,
-  `password` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `admin`
---
-
-INSERT INTO `admin` (`id`, `name`, `email`, `password`) VALUES
-(1, 'Rabita Amin', 'rabita@gmail.com', '1234');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `book1`
---
-
-CREATE TABLE `book1` (
-  `id` int(255) NOT NULL,
-  `isbn` int(255) NOT NULL,
-  `name` text NOT NULL,
-  `writer` text NOT NULL,
-  `category` text NOT NULL,
-  `image` varchar(1000) NOT NULL,
-  `count` int(255) NOT NULL,
-  `link` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `book1`
---
-
-INSERT INTO `book1` (`id`, `isbn`, `name`, `writer`, `category`, `image`, `count`, `link`) VALUES
-(1, 978013161, 'Computer Graphics', 'Roy|Gordon Kalley', 'CG', '../image/7.jpg', 350, 'https://ia800602.us.archive.org/21/items/SchaumsOutlineSeriesPlastockRoyA.XiangZhigangSchaumsOutlineOfTheoryAndProblemsOf/%28Schaum%27s%20outline%20series%29%20Plastock%2C%20Roy%20A._%20Xiang%2C%20Zhigang-Schaum%27s%20outline%20of%20theory%20and%20problems%20of%20computer%20graphics-McGraw-Hill%20%282000%29.pdf'),
-(2, 978111941, 'Accounting Principles', '\r\nWeygandt|Kimmel|Kieso', 'Accounting', '../image/6.jpg', 200, 'https://toaz.info/doc-viewer'),
-(24, 87907656, 'Introduction to Information Technology ', 'Pearson ', 'ITF', '', 100, ''),
-(25, 7865678, 'Electronic Devices and Circuits ', 'Millman and Halkias', 'EC', '', 120, ''),
-(26, 87453245, 'Electric Circuits', 'Schaum\'s series, McGraw Hill', 'EC', '', 200, ''),
-(27, 89765678, ' Programming with C', 'Byron Gottfried ', 'IPE', '', 150, ''),
-(28, 6754567, 'C Made Easy', 'Herbert Schidt, McGraw Hill', 'IPE', '', 160, ''),
-(29, 6758907, 'Data Structure and Algorithm', 'Schaum‟s Outline Series ', 'DS', '', 200, ''),
-(30, 89076789, 'Fundamentals of Data Structures', ' Horowitz E. and Sahni, S Galgotia ', 'DS', '', 59, ''),
-(31, 76896567, 'Head First Java', ' Kathy Sierra and Bert Bates, O‟reilly publication', 'OOP', '', 100, ''),
-(32, 67589867, 'Object Oriented Programming with C++  ', 'E. Balagurusamy', 'OOP', '', 150, ''),
-(33, 45678767, 'Fundamentals of Database Systems', 'Elmasri & Navathe,Addison Wesley', 'DB', '', 150, ''),
-(34, 89765678, 'Database Management Systems', 'Ramakrishnan R. & Gehrke J.,McGraw Hill ', 'DB', '', 200, ''),
-(35, 45643567, 'Principles of Interactive Computer Graphics', 'William M., Newman, McGraw-Hill', 'CG', '', 120, ''),
-(36, 98765678, 'Computer Graphics \r\n', 'James D. Foley, Andries van Dam, Steven K. Feiner, John F. Hughes', 'CG', '', 85, ''),
-(37, 89764534, 'An Introduction to the Intel Family of Microprocessors ', 'James L. Antonakos . Prentice Hall, \r\n3ed Edition, 1999', 'MP', '', 80, ''),
-(38, 98764534, 'Microprocessor architecture programming and applications\r\n', ' Gaonkar, 3rd edition', 'MP', '', 80, ''),
-(39, 87689087, 'Web Programming. Building Internet Applications\r\n', 'John Wiley & Sons, \r\nLtd., 2002. ', 'Web', '', 55, ''),
-(40, 54678987, 'Accounting for Non-Accountants', ' Wayne Label', 'Accounting', '', 155, '');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `comments`
---
-
-CREATE TABLE `comments` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `comment` mediumtext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `comments`
---
-
-INSERT INTO `comments` (`id`, `name`, `email`, `comment`) VALUES
-(5, 'Sahal', 'me.sahal3000@gmail.com', 'Hey'),
-(6, 'Rabita', 'rabita@gmail.com', 'Nice one!!!'),
-(8, 'Afrin', 'afrinahmed01@gmail.com', 'You guys have done a tremendous job. Hope this will continue. Good luck and best wishes...'),
-(9, 'Sumaiya', 'sumbinhid@gmail.com', 'Great job.'),
-(10, 'Arman', 'sohelbd005@yahoo.com', 'Profile management should be improved.'),
-(11, 'Michael', 'mike034@gamil.com', 'Should be more professional.'),
-(12, 'Rabita', 'rabita@gmail.com', 'Very nice'),
-(13, 'Rayhan', 'rayhan@gmail.com', 'Great help'),
-(14, 'Rayhan', 'rayhan@gmail.com', 'Great help'),
-(15, 'Ahsan', 'ahsan@gmail.com', 'Hi'),
-(16, 'Sahal', 'sahal@gmail.com', 'Hello'),
-(17, 'Arani', 'arani@gmail.com', 'Nice Service');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `contact`
---
-
-CREATE TABLE `contact` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `fullname` varchar(100) DEFAULT NULL,
-  `phoneno` int(10) DEFAULT NULL,
-  `email` text DEFAULT NULL,
-  `cdate` date DEFAULT NULL,
-  `approval` varchar(12) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `login`
---
-
-CREATE TABLE `login` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `usname` varchar(30) DEFAULT NULL,
-  `pass` varchar(30) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `login`
---
-
-INSERT INTO `login` (`id`, `usname`, `pass`) VALUES
-(1, 'Admin', '1234'),
-(2, 'Prasath', '12345');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `newsletterlog`
---
-
-CREATE TABLE `newsletterlog` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `title` varchar(52) DEFAULT NULL,
-  `subject` varchar(100) DEFAULT NULL,
-  `news` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `payment`
---
-
-CREATE TABLE `payment` (
-  `id` int(11) DEFAULT NULL,
-  `title` varchar(5) DEFAULT NULL,
-  `fname` varchar(30) DEFAULT NULL,
-  `lname` varchar(30) DEFAULT NULL,
-  `troom` varchar(30) DEFAULT NULL,
-  `tbed` varchar(30) DEFAULT NULL,
-  `nroom` int(11) DEFAULT NULL,
-  `cin` date DEFAULT NULL,
-  `cout` date DEFAULT NULL,
-  `ttot` double(8,2) DEFAULT NULL,
-  `fintot` double(8,2) DEFAULT NULL,
-  `mepr` double(8,2) DEFAULT NULL,
-  `meal` varchar(30) DEFAULT NULL,
-  `btot` double(8,2) DEFAULT NULL,
-  `noofdays` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `room`
---
-
-CREATE TABLE `room` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `type` varchar(15) DEFAULT NULL,
-  `bedding` varchar(10) DEFAULT NULL,
-  `place` varchar(10) DEFAULT NULL,
-  `cusid` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `room`
---
-
-INSERT INTO `room` (`id`, `type`, `bedding`, `place`, `cusid`) VALUES
-(1, 'Superior Room', 'Single', 'Free', NULL),
-(2, 'Superior Room', 'Double', 'Free', NULL),
-(3, 'Superior Room', 'Triple', 'Free', NULL),
-(4, 'Single Room', 'Quad', 'Free', NULL),
-(5, 'Superior Room', 'Quad', 'Free', NULL),
-(6, 'Deluxe Room', 'Single', 'Free', NULL),
-(7, 'Deluxe Room', 'Double', 'Free', NULL),
-(8, 'Deluxe Room', 'Triple', 'Free', NULL),
-(9, 'Deluxe Room', 'Quad', 'Free', NULL),
-(10, 'Guest House', 'Single', 'Free', NULL),
-(11, 'Guest House', 'Double', 'Free', NULL),
-(12, 'Guest House', 'Quad', 'Free', NULL),
-(13, 'Single Room', 'Single', 'Free', NULL),
-(14, 'Single Room', 'Double', 'Free', NULL),
-(15, 'Single Room', 'Triple', 'Free', NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `roombook`
---
-
-CREATE TABLE `roombook` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `Title` varchar(5) DEFAULT NULL,
-  `FName` text DEFAULT NULL,
-  `LName` text DEFAULT NULL,
-  `Email` varchar(50) DEFAULT NULL,
-  `National` varchar(30) DEFAULT NULL,
-  `Country` varchar(30) DEFAULT NULL,
-  `Phone` text DEFAULT NULL,
-  `TRoom` varchar(20) DEFAULT NULL,
-  `Bed` varchar(10) DEFAULT NULL,
-  `NRoom` varchar(2) DEFAULT NULL,
-  `Meal` varchar(15) DEFAULT NULL,
-  `cin` date DEFAULT NULL,
-  `cout` date DEFAULT NULL,
-  `stat` varchar(15) DEFAULT NULL,
-  `nodays` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `user`
---
-
-CREATE TABLE `user` (
-  `userID` int(11) NOT NULL,
-  `firstName` varchar(100) NOT NULL,
-  `lastName` varchar(100) NOT NULL,
-  `email` varchar(200) NOT NULL,
-  `password` varchar(200) NOT NULL,
-  `profileImage` varchar(255) NOT NULL,
-  `registerDate` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`userID`, `firstName`, `lastName`, `email`, `password`, `profileImage`, `registerDate`) VALUES
-(1, 'Ali', 'Hossain', 'ali@gmail.com', '$2y$10$SdYmQ60NIODRD74.TiYw2uDI55a5ghp.UnxjiE1Nm.yKcPCw7H4Ja', './assets/profile/beard.png', '2022-03-10 09:57:23'),
-(2, 'Ayesha', 'Kabir', 'ayesha@gmail.com', '$2y$10$sKiT0BmWUGzaLZJtRV/tGevnQ/vP6xshKhBl/pGA0doDVeowLm8Ym', './image/profile/../image/profile/beard.png', '2022-03-10 20:47:29'),
-(3, 'Ayesha', 'Kabir', 'ayesha@gmail.com', '$2y$10$XciPTgKQEMqMHy9TdpvZcORhnTWXdCFKWdOF9J7A3HfKSKunrmdW2', './image/profile/../image/profile/beard.png', '2022-03-10 20:47:33'),
-(4, 'Ayesha', 'Kabir', 'ayesha@gmail.com', '$2y$10$ssn9rmHCsLpn5YCtB/nDqO2JVENht5j4Qbfm/x4irNPPkDtUx68Km', './image/profile/../image/profile/beard.png', '2022-03-10 20:47:40'),
-(5, 'Arman', 'Khan', 'arman@gmail.com', '$2y$10$BT4Shonc/swR8GaQ192cBeXmZSGMoTG7TjGafvK8.K5y1ZGfW/Bay', './image/profile/../image/profile/beard.png', '2022-03-11 08:22:07'),
-(6, 'Rabita', 'Amin', 'rabita@gmail.com', '$2y$10$bvMTvpvOryQqUArhxqUV9eu61NlsAffKLW1SDN9ijge6X/Z8.WmA.', '../image/profile../image/profile/beard.png', '2022-03-12 21:55:52'),
-(7, 'Md', 'Sahal', 'sahal@gmail.com', '$2y$10$mIfcLj6GTYJYsY1.hUOE8eknUD7RCeQvvfLVG/hhXr8ZVw2f/.w5G', '../image/profile../image/profile/beard.png', '2022-03-13 09:20:13'),
-(8, 'Md', 'Sahal', 'sahal@gmail.com', '$2y$10$FYaQHOWFfvNBJai6VbfvVe5j96Vk7FDs73LAsrkcC5SKusYuRvXPa', '../image/profile../image/profile/beard.png', '2022-03-13 09:20:28'),
-(9, 'Rafi', 'Alam', 'rafi@gmail.com', '$2y$10$WHwOdQuk52JKo3w3hni6DOBe1zfTdYp8JjzVfqGOe.nql7SVm7zy6', '../image/profile../image/profile/beard.png', '2022-03-13 09:23:22'),
-(10, 'Rafi', 'Alam', 'rafi@gmail.com', '$2y$10$YSKg4aPuP90ggcWiIfdeGupEE0d8pCVFkTjuX46vujd3xdrsIqF.W', '../image/profile../image/profile/beard.png', '2022-03-13 09:24:21'),
-(11, 'Rafi', 'Alam', 'rafi@gmail.com', '$2y$10$eBelCHtbrbh0cNhLTX6mwuq9HE4liMdtvGhT0Wzi8x7grMFfMmq/W', '../image/profile../image/profile/beard.png', '2022-03-13 09:24:43'),
-(12, 'Sahal', 'Alam', 'sahal@gmail.com', '$2y$10$x0SGG3KbdzdGnkiiYdS5a.k8Vt2pwU7ltg9TDTXXNu1cNDfCqkmua', '../image/profile../image/profile/beard.png', '2022-03-13 09:25:03'),
-(13, 'Sahal', 'Alam', 'sahal@gmail.com', '$2y$10$pdGYeUWu.nTEFh3dLeSP1eukLUwnsm0R7hs6Wyl4oLFcXrkQ4qVui', '../image/profile../image/profile/beard.png', '2022-03-13 09:34:12'),
-(14, 'Sahal', 'Alam', 'sahal@gmail.com', '$2y$10$Pf0J5aCcAK8A0tEKxtUG.O/ATGHBwURaaq7gzxQ/kXkIdud/DSPbS', '../image/profile../image/profile/beard.png', '2022-03-13 09:34:27'),
-(15, 'Sahal', 'Alam', 'sahal@gmail.com', '$2y$10$Ua0kYiI3jlChrKeNJy./H.oK8vPnHU1Nu//A1kVgtDk4kveYIsmE6', '../image/profile../image/profile/beard.png', '2022-03-13 09:36:06'),
-(16, 'Rafi', 'Alam', 'rafi@gmail.com', '$2y$10$OlwbzWI.jGsPQwzxi5c0j.0VB01TibLZ6nL2wBLRVk0ZlwKc8Vg16', '../image/profile../image/profile/beard.png', '2022-03-13 09:36:38'),
-(17, 'Ratri', 'Amin', 'ratri@gmail.com', '$2y$10$ZkDJDnGHHvMNKHJld.PnQOrZ3xbKjIX60NMcFHlcTdjNe..8QXP3e', '../image/profile../image/profile/beard.png', '2022-03-13 10:19:40'),
-(18, 'Asha', 'Akter', 'asha@gmaail.com', '$2y$10$ixTZIDjUtGWGD067qH1o2..eYA7JSVXPDBbjjvw1UooyY8qtkIu3G', '../image/profile../image/profile/beard.png', '2022-03-13 10:53:51'),
-(19, 'Ashaa', 'Akter', 'ashaa@gmaail.com', '$2y$10$u5br.Nxa8DgPEhuTjcnlReBXFJCMndtlRAq2K9EIVXbfXLhOeuNea', '../image/profile../image/profile/beard.png', '2022-03-13 10:57:07'),
-(20, 'qwe', 'rr', 'qwe@gmail.com', '$2y$10$2u8PJ5jBvQdD5TeyO6afnurBBm8ECAfb3WIrJour8B1asiMWUbcf6', '../image/profile../image/profile/beard.png', '2022-03-13 10:59:05'),
-(21, 'sumu', 'mali', 'sumu@gmail.com', '$2y$10$rBvgLDhtTZz5pSPO9hKH1.1cHmH4J8VpFuv8zamI/ApyocPquacCC', '../image/profile../image/profile/beard.png', '2022-03-13 11:26:05'),
-(22, 'Jack', 'adison', 'jack@gmail.com', '$2y$10$c4lVOXeWD1wQCPIRQrRheOyjp7NZrqHCMImAaGOuxEFbZZm3CiQJy', '../image/profile../image/profile/beard.png', '2022-03-13 11:52:56');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `book1`
---
-ALTER TABLE `book1`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `comments`
---
-ALTER TABLE `comments`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `contact`
---
-ALTER TABLE `contact`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `login`
---
-ALTER TABLE `login`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `newsletterlog`
---
-ALTER TABLE `newsletterlog`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `room`
---
-ALTER TABLE `room`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `roombook`
---
-ALTER TABLE `roombook`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`userID`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `admin`
---
-ALTER TABLE `admin`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `book1`
---
-ALTER TABLE `book1`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
-
---
--- AUTO_INCREMENT for table `comments`
---
-ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
-
---
--- AUTO_INCREMENT for table `contact`
---
-ALTER TABLE `contact`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `login`
---
-ALTER TABLE `login`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `newsletterlog`
---
-ALTER TABLE `newsletterlog`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `room`
---
-ALTER TABLE `room`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-
---
--- AUTO_INCREMENT for table `roombook`
---
-ALTER TABLE `roombook`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `user`
---
-ALTER TABLE `user`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex,nofollow">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <style id="cfs-style">html{display: none;}</style>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+      <link rel="stylesheet" type="text/css" href="./themes/pmahomme/jquery/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="js/vendor/codemirror/lib/codemirror.css?v=5.0.4">
+    <link rel="stylesheet" type="text/css" href="js/vendor/codemirror/addon/hint/show-hint.css?v=5.0.4">
+    <link rel="stylesheet" type="text/css" href="js/vendor/codemirror/addon/lint/lint.css?v=5.0.4">
+    <link rel="stylesheet" type="text/css" href="./themes/pmahomme/css/theme.css?v=5.0.4&nocache=4652741110ltr&server=1">
+    <link rel="stylesheet" type="text/css" href="./themes/pmahomme/css/printview.css?v=5.0.4" media="print" id="printcss">
+    <title>Access denied!</title>
+    <script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery.min.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery-migrate.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/whitelist.php?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/vendor/sprintf.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/ajax.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/keyhandler.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/vendor/bootstrap/bootstrap.bundle.min.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery-ui.min.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/vendor/js.cookie.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery.mousewheel.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery.event.drag-2.2.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery.validate.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery-ui-timepicker-addon.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery.ba-hashchange-1.3.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery.debounce-1.0.5.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/menu_resizer.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/cross_framing_protection.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/rte.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/vendor/tracekit.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/error_report.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/messages.php?l=en&amp;v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/config.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/doclinks.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/functions.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/navigation.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/indexes.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/common.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/page_settings.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/drag_drop_import.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/shortcuts_handler.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/vendor/codemirror/lib/codemirror.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/vendor/codemirror/mode/sql/sql.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/vendor/codemirror/addon/runmode/runmode.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/vendor/codemirror/addon/hint/show-hint.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/vendor/codemirror/addon/hint/sql-hint.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/vendor/codemirror/addon/lint/lint.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/codemirror/addon/lint/sql-lint.js?v=5.0.4"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/console.js?v=5.0.4"></script>
+
+<script data-cfasync="false" type="text/javascript">
+// <![CDATA[
+CommonParams.setAll({common_query:"",opendb_url:"db_structure.php",lang:"en",server:"1",table:"",db:"",token:"7f2f6f3a5732593e7340767251587f60",text_dir:"ltr",show_databases_navigation_as_tree:true,pma_text_default_tab:"Browse",pma_text_left_default_tab:"Structure",pma_text_left_default_tab2:false,LimitChars:"50",pftext:"",confirm:true,LoginCookieValidity:"1440",session_gc_maxlifetime:"1440",logged_in:false,is_https:false,rootPath:"/phpmyadmin/",arg_separator:"&",PMA_VERSION:"5.0.4",auth_type:"config",user:"root"});
+ConsoleEnterExecutes=false
+
+AJAX.scriptHandler
+  .add('vendor/jquery/jquery.min.js', 0)
+  .add('vendor/jquery/jquery-migrate.js', 0)
+  .add('whitelist.php', 1)
+  .add('vendor/sprintf.js', 1)
+  .add('ajax.js', 0)
+  .add('keyhandler.js', 1)
+  .add('vendor/bootstrap/bootstrap.bundle.min.js', 1)
+  .add('vendor/jquery/jquery-ui.min.js', 0)
+  .add('vendor/js.cookie.js', 1)
+  .add('vendor/jquery/jquery.mousewheel.js', 0)
+  .add('vendor/jquery/jquery.event.drag-2.2.js', 0)
+  .add('vendor/jquery/jquery.validate.js', 0)
+  .add('vendor/jquery/jquery-ui-timepicker-addon.js', 0)
+  .add('vendor/jquery/jquery.ba-hashchange-1.3.js', 0)
+  .add('vendor/jquery/jquery.debounce-1.0.5.js', 0)
+  .add('menu_resizer.js', 1)
+  .add('cross_framing_protection.js', 0)
+  .add('rte.js', 1)
+  .add('vendor/tracekit.js', 1)
+  .add('error_report.js', 1)
+  .add('messages.php', 0)
+  .add('config.js', 1)
+  .add('doclinks.js', 1)
+  .add('functions.js', 1)
+  .add('navigation.js', 1)
+  .add('indexes.js', 1)
+  .add('common.js', 1)
+  .add('page_settings.js', 1)
+  .add('drag_drop_import.js', 1)
+  .add('shortcuts_handler.js', 1)
+  .add('vendor/codemirror/lib/codemirror.js', 0)
+  .add('vendor/codemirror/mode/sql/sql.js', 0)
+  .add('vendor/codemirror/addon/runmode/runmode.js', 0)
+  .add('vendor/codemirror/addon/hint/show-hint.js', 0)
+  .add('vendor/codemirror/addon/hint/sql-hint.js', 0)
+  .add('vendor/codemirror/addon/lint/lint.js', 0)
+  .add('codemirror/addon/lint/sql-lint.js', 0)
+  .add('console.js', 1)
+;
+$(function() {
+        AJAX.fireOnload('whitelist.php');
+      AJAX.fireOnload('vendor/sprintf.js');
+        AJAX.fireOnload('keyhandler.js');
+      AJAX.fireOnload('vendor/bootstrap/bootstrap.bundle.min.js');
+        AJAX.fireOnload('vendor/js.cookie.js');
+                  AJAX.fireOnload('menu_resizer.js');
+        AJAX.fireOnload('rte.js');
+      AJAX.fireOnload('vendor/tracekit.js');
+      AJAX.fireOnload('error_report.js');
+        AJAX.fireOnload('config.js');
+      AJAX.fireOnload('doclinks.js');
+      AJAX.fireOnload('functions.js');
+      AJAX.fireOnload('navigation.js');
+      AJAX.fireOnload('indexes.js');
+      AJAX.fireOnload('common.js');
+      AJAX.fireOnload('page_settings.js');
+      AJAX.fireOnload('drag_drop_import.js');
+      AJAX.fireOnload('shortcuts_handler.js');
+                    AJAX.fireOnload('console.js');
+  });
+// ]]>
+</script>
+
+  <noscript><style>html{display:block}</style></noscript>
+</head>
+<body id=loginform>
+  
+  
+  
+
+  
+      <noscript>
+      <div class="error"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_error"> Javascript must be enabled past this point!</div>
+    </noscript>
+  
+  
+  
+
+  <div id="page_content">
+    
+
+  
+<br><br>
+    <center>
+        <h1>Welcome to  phpMyAdmin </h1>
+    </center>
+    <br>
+    <table cellpadding="0" cellspacing="3" class= "auth_config_tbl" width="80%">
+        <tr>
+            <td><div class="error"><h1>Error</h1><p>
+    <strong>MySQL said: </strong><a href="./url.php?url=https%3A%2F%2Fdev.mysql.com%2Fdoc%2Frefman%2F5.7%2Fen%2Fserver-error-reference.html" target="mysql_doc"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a>
+</p>
+<code>Cannot connect: invalid settings.</code><br></div><div class="error"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_error"> mysqli::real_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO)</div><div class="error"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_error"> phpMyAdmin tried to connect to the MySQL server, and the server rejected the connection. You should check the host, username and password in your configuration and make sure that they correspond to the information given by the administrator of the MySQL server.</div></td>
+        </tr>
+        <tr>
+            <td>
+<a href="index.php" class="button disableAjax">Retry to connect</a>
+</td>
+        </tr>
+</table>
+  </div>
+  </body>
+</html>

@@ -152,7 +152,7 @@ return $filter_Result;
                         <a href="">Category</a></li>
                         <li><a href="../index.html">Home</a></li>
                         <li><a href="upload_book.php">Add Book</a></li>
-                       <li> <a href="book.php">Book</a></li>
+                       <li> <a href="adminbook.php">Book</a></li>
                        
                        <li class="reg-btn"> <a href="logout.php">Log Out</a></li>
                        
@@ -166,25 +166,19 @@ return $filter_Result;
             <table class="t1">
                 <thead>
                     <tr>
-                        <th><a href="cg.php">COMPUTER GRAPHICS</a></th>
+                        <th><a href="adminbook.php">All Books</a></th>
                         
                     </tr>
                     <tr>
-                        <th><a href="wt.php">WEB TECHNOLOGY</a></th>
+                        <th><a href="onlinebook.php">Online Copies</a></th>
                         
                     </tr>
                     <tr>
-                        <th><a href="mp.php">MICROPROCESSOR</a></th>
+                        <th><a href="offlinebook.php">Offline Copies</a></th>
                         
                     </tr>
-                    <tr>
-                        <th><a href="bi.php">BIO INFORMATICS</a></th>
-                        
-                    </tr>
-                    <tr>
-                        <th><a href="se.php">SOFTWARE ENGINEERING</a></th>
-                        
-                    </tr>
+                    
+                    
                 </thead>
 </table>
 </div>
