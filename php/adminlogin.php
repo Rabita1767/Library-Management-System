@@ -1,45 +1,36 @@
 <?php
+include 'connection1.php';
 session_start();
 error_reporting(0);
-
-$username="root";
-$password="";
-$server="localhost";
-$db="webtech";
-$con=mysqli_connect($server,$username,$password,$db);
-if(isset($_POST['submit']))
-
+if(isset($_POST["signin"]))
 {
-  $email=$_POST['email'];
-  $pass=$_POST['pass'];
  
-  $sql="select * from admin where email='$email' AND password='$pass'";
-  $res=mysqli_query($con,$sql);
+  $email=mysqli_real_escape_string($con,$_POST["email"]);
+  
+  $password=mysqli_real_escape_string($con,md5($_POST["password"]));
+  
+  $check_email=mysqli_query($con,"SELECT * FROM admins WHERE email='$email' AND password='$password'");
+ if(mysqli_num_rows($check_email)>0){
+     $row=mysqli_fetch_assoc($check_email);
+     $_SESSION["user_id"]=$row['id'];
+     $_SESSION["user_name"]=$row['full_name'];
+     $_SESSION["user_Contact_number"]=$row['Contact_number'];
+     $_SESSION["user_email"]=$row['email'];
+    
+     header("Location:adminindex.php");
 
-$row=mysqli_fetch_array($res);
-if(($row['email']==$email) && ($row['password']==$pass))
-{
-    $_SESSION['email']=$email;
-   
-        header("location:adminindex.php");
-
-
-
+ }
+ else{
+     ?>
+     <script>
+         alert("Login Details is incorrect");
+     </script>
+     <?php
+ }
+  
+    
 }
-else{
-    echo "Log in Failed!Email or Password doesn't match";
-}
-
-
-
-}
-
-
-
 ?>
-
-
-
 
 
 <!DOCTYPE html>
@@ -58,51 +49,39 @@ else{
 
 </head>
 <body>
-<div class="container">
-  <div class="row">
-    <div class="col-md-6 register-left">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 register-left">
       <img src="../image/reg.png">
-    </div>
-    <div class="col-md-6 register-right">
-    <h3>Log in as Admin</h3>
-    
-      <div class="register-form">
-      
-      <form action="" class="login-email" method="post">
-  
-
-  <div class="form-group">
-    <label for="email">Email</label>
-    <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
-  </div>
-  <div class="form-group">
-    <label for="password">Password</label>
-    <input type="password" name="pass" class="form-control" id="pass" required>
-  </div>
-  
-
-  
-  <div class="input-group">
-  <button type="submit" name="submit"class="btn btn-primary">Log in</button></div>
-
-  
-</form>
-<div class="alert alert-info" style="display: none;"></div>
-
 
       </div>
-
-
-    </div>
-
-  </div>
-
-</div>
-
+      <div class="col-md-6 register-right">
+      <h3>Login Here</h3>
+      <div class="register-form">
+        <form action="" class="login-email" method="post">
     
+        <div class="form-group">
+          <input type="email" placeholder="Email Address" class="form-control" name="email" autocomplete="off" required>
 
+        </div>
+        
+        <div class="form-group">
+          <input type="password" placeholder="Password" class="form-control" name="password"  required>
 
+        </div>
+        
+        <div class="input-group">
+  <button type="submit" name="signin" class="btn btn-primary">Login</button></div>
 
+  <p class="login-register-text">Don't have an account?<a href="admin_register.php">Register Here</a></p>
+</form>
+<div class="alert alert-info" style="display: none;"></div>
+</form>
+
+      </div>
+      </div>
+    </div>
+  </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

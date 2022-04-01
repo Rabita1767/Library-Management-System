@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 30, 2022 at 09:05 AM
+-- Generation Time: Apr 01, 2022 at 05:54 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.1
 
@@ -39,6 +39,28 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`id`, `email`, `password`) VALUES
 (2, 'admin@gmail.com', '1234');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admins`
+--
+
+CREATE TABLE `admins` (
+  `id` int(11) NOT NULL,
+  `full_name` varchar(100) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `Contact_number` varchar(255) NOT NULL,
+  `cid` int(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admins`
+--
+
+INSERT INTO `admins` (`id`, `full_name`, `email`, `password`, `Contact_number`, `cid`) VALUES
+(1, 'Rabita Amin', 'rabita019@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', '01767896545', 1767);
 
 -- --------------------------------------------------------
 
@@ -432,7 +454,10 @@ INSERT INTO `user` (`id`, `full_name`, `email`, `password`, `Contact_number`, `c
 (11, 'Mursalin Amin', 'mursalin@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', '01676453567', 0),
 (12, 'Murshid Ali', 'zarif@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', '01913180675', 0),
 (13, 'Eva Jahan', 'eva@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', '019787656', 0),
-(14, 'Md Sahal', 'sa@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', '01987675456', 1785);
+(14, 'Md Sahal', 'sa@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', '01987675456', 1785),
+(15, 'Silvia Sandhi', 'sandhi@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', '01676453456', 1776),
+(16, 'Sumaiya Binte Shahid', 'sumaiya@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', '01787654567', 1769),
+(17, 'Afrin ', 'afrin61@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', '01676456789', 1761);
 
 -- --------------------------------------------------------
 
@@ -474,6 +499,12 @@ INSERT INTO `users` (`name`, `email`, `password`) VALUES
 -- Indexes for table `admin`
 --
 ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `admins`
+--
+ALTER TABLE `admins`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -553,6 +584,12 @@ ALTER TABLE `admin`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `admins`
+--
+ALTER TABLE `admins`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `client`
 --
 ALTER TABLE `client`
@@ -616,7 +653,7 @@ ALTER TABLE `trainbook`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

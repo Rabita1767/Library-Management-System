@@ -7,6 +7,7 @@ $con=mysqli_connect('localhost','root','','webtech');
 
 $name=$_SESSION["user_name"];
 $email=$_SESSION["user_email"];
+$number=$_SESSION["user_Contact_number"];
 
 if(!empty($_SESSION["shopping_cart"]))
 {
@@ -66,6 +67,7 @@ if(!empty($_SESSION["shopping_cart"]))
         <div>
             <h4>Student Email: '.$name.' </h4>
             <h4>Student Email: '.$email.' </h4>
+            <h4>Student Contact Number: '.$number.' </h4>
             
                     
             
