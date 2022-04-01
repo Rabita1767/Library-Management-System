@@ -34,6 +34,7 @@ session_start();
                         <li><a href="adminbook.php">BOOKS</a>
                     </li>
                         <li><a href="upload_book.php">ADD BOOKS</a></li>
+                        <li><a href="adduser.php">ADD USER</a></li>
                         <li><a href="booktype.php">Book Type</a></li>
                         <li> <a href=""><?php echo  $_SESSION["user_name"];?></a></li>
                        
