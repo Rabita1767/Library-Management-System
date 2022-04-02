@@ -303,6 +303,7 @@ h3 {
                         <li><a href="adminbook.php">BOOKS</a></li>
                         
                         <li><a href="upload_book.php">Add Book</a></li>
+                        <li> <a href="graph.php">Dashboard</a></li>
                         
                     </ul>
                 </div>

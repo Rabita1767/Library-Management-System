@@ -1,4 +1,5 @@
 -- phpMyAdmin SQL Dump
+<<<<<<< HEAD
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
@@ -6,6 +7,15 @@
 -- Generation Time: Apr 02, 2022 at 09:50 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.10
+=======
+-- version 5.0.4
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Apr 02, 2022 at 11:23 AM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.1
+>>>>>>> 0327f0c1e3008053e462af1598a6d4c111de4822
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -165,6 +175,60 @@ CREATE TABLE `newsletterlog` (
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
+=======
+-- Table structure for table `offlinebook`
+--
+
+CREATE TABLE `offlinebook` (
+  `id` int(255) NOT NULL,
+  `isbn` int(255) NOT NULL,
+  `name` text NOT NULL,
+  `writer` text NOT NULL,
+  `category` text NOT NULL,
+  `count` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `offlinebook`
+--
+
+INSERT INTO `offlinebook` (`id`, `isbn`, `name`, `writer`, `category`, `count`) VALUES
+(1, 89767890, 'Introduction to Information Technology', 'Pearson Edication', 'ITF', 150),
+(2, 78675645, ' Computer and Information Processing', 'William M. Four', 'ITF', 100),
+(3, 87678982, 'Electronic Devices and Circuits', 'Millman and Halkias', 'EC', 120),
+(4, 65784534, 'Electric Circuits', 'Edminister J.A, Schaum\'s series, McGraw Hill', 'EC', 100),
+(5, 78954534, 'Programming with C', 'Byron Gottfried (Schaum‟s Outline Series)', 'IPE', 120),
+(6, 78654567, 'C Made Easy', 'Herbert Schidt,McGraw Hill', 'IPE', 130),
+(7, 87567876, 'Data Structure and Algorithm', 'Schaum‟s Outline Series ', 'DS', 150);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `onlinebook`
+--
+
+CREATE TABLE `onlinebook` (
+  `id` int(255) NOT NULL,
+  `isbn` int(255) NOT NULL,
+  `name` text NOT NULL,
+  `writer` text NOT NULL,
+  `category` text NOT NULL,
+  `count` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `onlinebook`
+--
+
+INSERT INTO `onlinebook` (`id`, `isbn`, `name`, `writer`, `category`, `count`) VALUES
+(2, 978013161, 'Computer Graphics', 'Roy|Gordon Kalley', 'CG', 100),
+(3, 978111941, 'Accounting Principles', 'Weygandt|Kimmel|Kieso', 'Accounting', 150);
+
+-- --------------------------------------------------------
+
+--
+>>>>>>> 0327f0c1e3008053e462af1598a6d4c111de4822
 -- Table structure for table `payment`
 --
 
@@ -331,6 +395,21 @@ ALTER TABLE `newsletterlog`
   ADD PRIMARY KEY (`id`);
 
 --
+<<<<<<< HEAD
+=======
+-- Indexes for table `offlinebook`
+--
+ALTER TABLE `offlinebook`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `onlinebook`
+--
+ALTER TABLE `onlinebook`
+  ADD PRIMARY KEY (`id`);
+
+--
+>>>>>>> 0327f0c1e3008053e462af1598a6d4c111de4822
 -- Indexes for table `room`
 --
 ALTER TABLE `room`
@@ -389,6 +468,21 @@ ALTER TABLE `newsletterlog`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+<<<<<<< HEAD
+=======
+-- AUTO_INCREMENT for table `offlinebook`
+--
+ALTER TABLE `offlinebook`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `onlinebook`
+--
+ALTER TABLE `onlinebook`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+>>>>>>> 0327f0c1e3008053e462af1598a6d4c111de4822
 -- AUTO_INCREMENT for table `room`
 --
 ALTER TABLE `room`
