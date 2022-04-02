@@ -28,7 +28,21 @@ if(isset($_POST["add"]))
            <?php
 
        }
+     
+       //database insert for pdf
+        $res1 = $item_array['item_id'];
+        $res2 = $item_array['item_name'];
+        $res3 = $item_array['item_writer'];
+        
+        $insertquery="INSERT INTO `receipt`(`id`, `name`, `writer`) VALUES ('$res1','$res2','$res3')";
+        $res=mysqli_query($con,$insertquery);
 
+
+        //Database insert for pie chart
+
+
+        
+        
    }
    else{
        $item_array=array(

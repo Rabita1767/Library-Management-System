@@ -59,9 +59,11 @@ if(isset($_GET['action']))
                 <?php
             }
         }
-
-
     }
+    //database delete for pdf
+    // $bad = $_GET["id"];
+    // $khana="delete from receipt where id=$bad";
+    // $query=mysqli_query($con,$khana);
 
 }
 if(isset($_POST['search']))
@@ -200,7 +202,7 @@ return $filter_Result;
 
     </div>
     <div class="b2">
-      <a href="pdf_generator.php"> <data-toggle="tooltip" data-placement="top" title="Proceed">Proceed to Continue<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+      <a href="reciept_pdf.php"> <data-toggle="tooltip" data-placement="top" title="Proceed">Proceed to Continue<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 
       </div>
 
