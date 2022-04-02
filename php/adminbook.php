@@ -153,7 +153,7 @@ return $filter_Result;
                         <li><a href="adminindex">Home</a></li>
                         <li><a href="upload_book.php">Add Book</a></li>
                        <li> <a href="adminbook.php">Book</a></li>
-                       <li> <a href="graph.php">Dashboard</a></li>
+                       <li> <a href="graph2.php">Dashboard</a></li>
                        
                        <li class="reg-btn"> <a href="logout.php">Log Out</a></li>
                        
