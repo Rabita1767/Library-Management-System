@@ -14,6 +14,7 @@ if(isset($_POST["add"]))
             'item_id' => $_GET["id"],
             'item_name' => $_POST["hidden_name"],
             'item_writer' => $_POST["hidden_writer"],
+            'item_category' => $_POST["hidden_category"],
             'item_quantity' => $_POST["quantity"]
  
 
@@ -36,12 +37,14 @@ if(isset($_POST["add"]))
            'item_id' => $_GET["id"],
            'item_name' => $_POST["hidden_name"],
            'item_writer' => $_POST["hidden_writer"],
+           'item_category' => $_POST["hidden_category"],
            'item_quantity' => $_POST["quantity"]
 
 
        );
        $_SESSION["shopping_cart"][0]=$item_array;
    }
+   
 
 }
 if(isset($_GET['action']))
@@ -173,6 +176,7 @@ return $filter_Result;
                 <th width="30%">Name</th>
                 <th width="30%">Writer Name</th>
                 <th width="10%">Quantity</th>
+               
                 <th width="5%">Action</th>
 
                 
@@ -189,6 +193,7 @@ return $filter_Result;
                         <td><?php echo $values["item_name"] ; ?></td>
                         <td><?php echo $values["item_writer"] ; ?></td>
                         <td><?php echo $values["item_quantity"] ; ?></td>
+                       
                         <td><a href="book.php?action=delete&id=<?php echo $values["item_id"] ;?>"><span class="text-danger"><i class="fa fa-trash"></i></span></a></td>
 
                     </tr>

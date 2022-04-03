@@ -13,6 +13,7 @@ if(isset($_POST["add"]))
             'item_id' => $_GET["id"],
             'item_name' => $_POST["hidden_name"],
             'item_writer' => $_POST["hidden_writer"],
+            'item_category' => $_POST["hidden_category"],
             'item_quantity' => $_POST["quantity"]
  
 
@@ -49,6 +50,7 @@ if(isset($_POST["add"]))
            'item_id' => $_GET["id"],
            'item_name' => $_POST["hidden_name"],
            'item_writer' => $_POST["hidden_writer"],
+           'item_category' => $_POST["hidden_category"],
            'item_quantity' => $_POST["quantity"]
 
 
@@ -244,6 +246,7 @@ return $filter_Result;
 
               <input type="text" name="quantity" class="form-control" value="1">
      <input type="hidden" name="hidden_name" value="<?php echo $res['name'];?>">
+     <input type="hidden" name="hidden_category" value="<?php echo $res['category'];?>">
      <input type="hidden" name="hidden_writer" value="<?php echo $res['writer'];?>">
 
       </div>

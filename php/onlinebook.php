@@ -51,7 +51,7 @@
                         <a href="adminindex.php">Home</a></li>
                         <li><a href="aboutdemo.php">Services</a></li>
                        <li> <a href="adminbook.php">Book</a></li>
-                       <li> <a href="servicedemo.php">Services</a></li>
+                       <li> <a href="graph2.php">Dashboard</a></li>
                        <li class="reg-btn"> <a href="logout.php">Log out</a></li>
                        
                     
