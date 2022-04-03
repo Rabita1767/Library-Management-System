@@ -36,9 +36,7 @@
 				<input type="button" value="Manage Pending Membership Registrations" />
 			</a><br />
 
-			<a href="update_balance.php">
-				<input type="button" value="Update Balance of Members" />
-			</a><br />
+			
 
 			<a href="graph2.php">
 				<input type="button" value="Dashboard" />

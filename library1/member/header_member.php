@@ -7,8 +7,7 @@
 		<header>
 			<div id="cd-logo">
 				<a href="../">
-					<img src="img/ic_logo2.svg" alt="Logo" width="45" height="45" />
-					<p>Library Management System</p>
+					<p>Online Library</p>
 				</a>
 			</div>
 			
@@ -23,7 +22,7 @@
 							$query->bind_param("s", $_SESSION['username']);
 							$query->execute();
 							$balance = (int)$query->get_result()->fetch_array()[0];
-							echo "Balance: Rs.".$balance;
+							//echo "Balance: Rs.".$balance;
 						?>
 					</a>
 					<a href="my_books.php">My books</a>

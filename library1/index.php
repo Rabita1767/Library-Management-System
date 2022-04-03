@@ -19,15 +19,15 @@
 		<div id="allTheThings">
 			<div id="member">
 				<a href="member">
-					<img src="img/ic_membership.svg" width="250px" height="auto"/><br />
-					&nbsp;Member Login
+					<img src="img/user3.png" width="250px" height="auto"/><br />
+					&nbsp;Student Login
 				</a>
 			</div>
 			<div id="verticalLine">
 				<div id="librarian">
 					<a id="librarian-link" href="librarian">
-						<img src="img/ic_librarian2.svg" width="250px" height="220" /><br />
-						&nbsp;&nbsp;&nbsp;Librarian Login
+						<img src="img/admin2.png" width="250px" height="220" /><br />
+						&nbsp;&nbsp;&nbsp;Admin Login
 					</a>
 				</div>
 			</div>
