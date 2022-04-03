@@ -27,7 +27,7 @@
 
        </div>
        <div class="col-md-6">
-       <form action="book.php"  method="post" >
+       <form action="adminbook.php"  method="post" >
             <div class="search">
             <div class="s1">
                 <div class="s2">
@@ -51,9 +51,11 @@
                 <ul>
                     <li class="r1">
                         <a href="">Category</a></li>
-                        <li><a href="adminindex">Home</a></li>
+                        
                         <li><a href="upload_book.php">Add Book</a></li>
                        <li> <a href="adminbook.php">Book</a></li>
+                       <li> <a href="graph2.php">Dashboard</a></li>
+
                        
                        <li class="reg-btn"> <a href="logout.php">Log Out</a></li>
                        
