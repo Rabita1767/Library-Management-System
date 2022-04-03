@@ -1,4 +1,13 @@
 -- phpMyAdmin SQL Dump
+<<<<<<< HEAD
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Apr 02, 2022 at 09:50 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.10
+=======
 -- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
@@ -6,6 +15,7 @@
 -- Generation Time: Apr 02, 2022 at 11:23 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.1
+>>>>>>> 0327f0c1e3008053e462af1598a6d4c111de4822
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -165,6 +175,8 @@ CREATE TABLE `newsletterlog` (
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
+=======
 -- Table structure for table `offlinebook`
 --
 
@@ -216,6 +228,7 @@ INSERT INTO `onlinebook` (`id`, `isbn`, `name`, `writer`, `category`, `count`) V
 -- --------------------------------------------------------
 
 --
+>>>>>>> 0327f0c1e3008053e462af1598a6d4c111de4822
 -- Table structure for table `payment`
 --
 
@@ -382,6 +395,8 @@ ALTER TABLE `newsletterlog`
   ADD PRIMARY KEY (`id`);
 
 --
+<<<<<<< HEAD
+=======
 -- Indexes for table `offlinebook`
 --
 ALTER TABLE `offlinebook`
@@ -394,6 +409,7 @@ ALTER TABLE `onlinebook`
   ADD PRIMARY KEY (`id`);
 
 --
+>>>>>>> 0327f0c1e3008053e462af1598a6d4c111de4822
 -- Indexes for table `room`
 --
 ALTER TABLE `room`
@@ -452,6 +468,8 @@ ALTER TABLE `newsletterlog`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+<<<<<<< HEAD
+=======
 -- AUTO_INCREMENT for table `offlinebook`
 --
 ALTER TABLE `offlinebook`
@@ -464,6 +482,7 @@ ALTER TABLE `onlinebook`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+>>>>>>> 0327f0c1e3008053e462af1598a6d4c111de4822
 -- AUTO_INCREMENT for table `room`
 --
 ALTER TABLE `room`

@@ -62,9 +62,11 @@ if(isset($_GET['action']))
                 <?php
             }
         }
-
-
     }
+    //database delete for pdf
+    // $bad = $_GET["id"];
+    // $khana="delete from receipt where id=$bad";
+    // $query=mysqli_query($con,$khana);
 
 }
 if(isset($_POST['search']))

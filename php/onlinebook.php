@@ -135,6 +135,7 @@ while($res=mysqli_fetch_array($query))
                 </tr>
                 
         </table>
+        <button type="button" class="btn btn-secondary"><a href="online_book_list_pdf.php" style="text-decoration: none;color:white">Print</a></button>
 
         </div>
 
