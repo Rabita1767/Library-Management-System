@@ -12,8 +12,7 @@ $result = $conn->query($select);
 $pdf = new FPDF();
 $pdf->AddPage();
 $pdf->SetFont('Arial','B',14);
-while($row = $result->fetch_object()){
-  $id = $row->id;
+while($row = $result->fetch_object()){ 
   $name = $row->name;
   $category = $row->category;
   $count = $row->count;
