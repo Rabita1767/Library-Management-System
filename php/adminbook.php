@@ -149,8 +149,8 @@ return $filter_Result;
      <div class="menu">
                 <ul>
                     <li class="r1">
-                        <a href="">Category</a></li>
-                        <li><a href="adminindex">Home</a></li>
+                       
+                        <li><a href="adminindex.php">Home</a></li>
                         <li><a href="upload_book.php">Add Book</a></li>
                        <li> <a href="adminbook.php">Book</a></li>
                        <li> <a href="graph.php">Dashboard</a></li>

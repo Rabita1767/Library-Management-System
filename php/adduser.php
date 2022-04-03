@@ -61,6 +61,7 @@
                 </ul>
                 
             </div>
+</section>
 
 <div class="container">
   <div class="row">
@@ -68,7 +69,7 @@
       <img src="../image/reg.png">
     </div>
     <div class="col-md-6 register-right">
-    <h3>Register Here</h3>
+    <h3>Add User</h3>
       <div class="register-form">
       <form action="" method="post">
   <div class="form-group">
